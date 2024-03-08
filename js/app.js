@@ -1,5 +1,13 @@
 
+//preloader handler
+const preloader_area = document.querySelector(".preloader");
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        preloader_area.style.visibility = "hidden"
+        preloader_area.style.opacity = "0"
+    }, 2000);
 
+})
 //offer banner handler
 const banner_close_button = document.querySelector(".banner_close");
 const banner_area = document.querySelector(".offer_banner");

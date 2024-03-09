@@ -66,14 +66,30 @@ decrease_button.forEach((btn, index) => {
     });
 });
 
+//copy coupon code 
+const coupon = document.querySelector(".coupon_code");
+const coupon_icon = document.querySelector(".copy_coupon");
 
+// Add a click event listener to the coupon icon
+coupon_icon.addEventListener("click", () => {
+    // Attempt to copy the text to the clipboard
+    navigator.clipboard.writeText(coupon.textContent)
+        .then(() => {
+            // If successful, update the coupon icon's innerHTML
+            coupon_icon.innerHTML = `<i class="fa-solid fa-clipboard-check"></i>  
+      <span class="coupon_code">Copied!</span>`;
+            setTimeout(() => {
+                coupon_icon.innerHTML = `<i class="fa-solid fa-copy"></i>  
+                <span class="coupon_code">KH632</span>`;
+            }, 2000);
 
-
-
-
-
+        })
+        .catch((err) => {
+            // Handle any errors, such as browser support or permission issues
+            console.error('Unable to copy text to clipboard', err);
+        });
+});
 //side cart hanlder
-
 $(".cart_icon").on("click", () => {
     $(".side_cart_wrapper").slideDown();
     $(".side_cart").fadeToggle();
@@ -100,12 +116,15 @@ $(".cart_close").on("click", () => {
 //     }
 // })
 
+//side cart handler
+
 $(document).on("click", (e) => {
     if (!$(".side_cart_wrapper").has(e.target).length && !$(".cart_close").has(e.target).length && $(".side_cart").has(e.target).length) {
         $(".side_cart_wrapper").slideUp();
         $(".side_cart").fadeToggle();
     }
 });
+
 $(".coupon_btn").on("click", () => {
     $(".discount_wrapper").slideDown();
     $(".discount_mini_popup").fadeToggle();
@@ -142,8 +161,6 @@ $(".delete_card").on("click", () => {
     $(".popup_div").slideUp();
     $(".mini_popup").fadeToggle();
 });
-// togglePopup(".gift_btn", ".delete_card", ".gift_mini_popup", ".gift_wrap");
-// togglePopup(".note_btn", ".delete_card", ".mini_popup", ".popup_div");
 
 //item dropdown hanler
 
@@ -159,6 +176,18 @@ $(".selected_div").each(function () {
     });
 });
 
+$(".category_name").on("click", function () {
+    $(".category_dropdown").fadeToggle()
+
+})
+
+$(".category_dropdown li").each((index, item) => {
+    $(item).on("click", () => {
+        let category_value = $(".selected_category");
+        category_value.text($(item).text());
+    });
+});
+
 
 const dropdown_item = document.querySelectorAll(".item_dropdown li")
 
@@ -167,7 +196,7 @@ dropdown_item.forEach(item => {
 
     item.addEventListener("click", () => {
 
-        let dropdown_value = item.parentElement.previousElementSibling
+        let dropdown_value = item.parentElement.previousElementSibling.querySelector(".selected_item")
         dropdown_value.textContent = item.textContent;
     })
 })

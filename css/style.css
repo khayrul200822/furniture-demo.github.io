@@ -270,6 +270,10 @@
   display: none;
 }
 
+.top_header .top_header_wrapper .right .item_wrapper .item_dropdown.two {
+  right: 0;
+}
+
 .top_header .top_header_wrapper .right .item_wrapper {
   position: relative;
 }
@@ -277,9 +281,9 @@
 .top_header .top_header_wrapper .right .item_wrapper .item_dropdown>li {
   padding: 5px;
   transition: .6s;
-  font-weight: 500;
   text-align: center;
   cursor: pointer;
+  color: #333;
 }
 
 .top_header .top_header_wrapper .right .item_wrapper .item_dropdown>li:hover {
@@ -299,9 +303,27 @@
 }
 
 ul.category_dropdown {
+  padding: 10px;
+  background: var(--secondary-color);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  transform: translate(0px, 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   display: none;
 }
+ul.category_dropdown li {
+  padding: 5px;
+  font-size: 14px;
+  transition: .6s;
+  cursor: pointer;
+}
 
+ul.category_dropdown li:hover {
+  color: var(--primary-color);
+  transition: .6s;
+}
 .main_header .main-header_wrapper .logo h2>span {
   color: #333;
 }
@@ -311,11 +333,12 @@ ul.category_dropdown {
   width: 450px;
   border-radius: 50px;
   border: 1px solid #db5b0024;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .main_header .main-header_wrapper .desktop_searchbar .select_category {
   width: 30%;
+  position: relative;
 }
 
 .main_header .main-header_wrapper .desktop_searchbar .select_category .category_name {
@@ -327,6 +350,9 @@ ul.category_dropdown {
   padding-left: 15px;
   background: #FAE8DB;
   font-weight: 500;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  cursor: pointer;
 }
 
 .main_header .main-header_wrapper .desktop_searchbar form.search_form {
@@ -922,7 +948,10 @@ ul.category_dropdown {
   bottom: 0;
 }
 
-.mini_popup_bg1, .mini_popup_bg2, .mini_popup_bg3, .mini_popup_bg4 {
+.mini_popup_bg1,
+.mini_popup_bg2,
+.mini_popup_bg3,
+.mini_popup_bg4 {
   width: 100%;
   height: 100%;
   background: #ffffff8a;
@@ -987,6 +1016,7 @@ ul.category_dropdown {
   transition: .6s;
   color: var(--primary-color);
 }
+
 .mini_popup {
   display: none;
 }
@@ -994,6 +1024,7 @@ ul.category_dropdown {
 .gift_mini_popup {
   display: none;
 }
+
 .rate_mini_popup {
   position: fixed;
   width: 100%;
@@ -1008,15 +1039,17 @@ ul.category_dropdown {
   z-index: 9;
   width: 350px;
   padding: 15px;
-  background: #FAE8DB;;
+  background: #FAE8DB;
+  ;
   bottom: 0;
 }
-.rate_mini_popup .rate_wrapper > div >span {
+
+.rate_mini_popup .rate_wrapper>div>span {
   font-size: 20px;
   color: var(--primary-color);
 }
 
-.rate_mini_popup .rate_wrapper > div > p {
+.rate_mini_popup .rate_wrapper>div>p {
   font-size: 14px;
   color: #333;
   margin-bottom: 0;
@@ -1028,7 +1061,9 @@ ul.category_dropdown {
   font-size: 14px;
 }
 
-.rate_mini_popup .rate_wrapper form.shiping_form .single_input select,.single_input input, #cupon_form input {
+.rate_mini_popup .rate_wrapper form.shiping_form .single_input select,
+.single_input input,
+#cupon_form input {
   width: 100%;
   padding: 10px 15px;
   border-radius: 50px;
@@ -1039,11 +1074,12 @@ ul.category_dropdown {
   font-size: 14px;
 }
 
-.rate_mini_popup .rate_wrapper form.shiping_form .single_input  label {
+.rate_mini_popup .rate_wrapper form.shiping_form .single_input label {
   font-weight: 500;
 }
 
-.rate_mini_popup .rate_wrapper form.shiping_form button, form#cupon_form button {
+.rate_mini_popup .rate_wrapper form.shiping_form button,
+form#cupon_form button {
   outline: none;
   border: 1px solid transparent;
   width: 100%;
@@ -1055,24 +1091,28 @@ ul.category_dropdown {
   transition: .6s;
 }
 
-.rate_mini_popup .rate_wrapper form.shiping_form button:hover,form#cupon_form button:hover {
+.rate_mini_popup .rate_wrapper form.shiping_form button:hover,
+form#cupon_form button:hover {
   transition: .6s;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
 
-.rate_mini_popup .rate_wrapper form.shiping_form button:not(:last-child), form#cupon_form button:not(:last-child) {
+.rate_mini_popup .rate_wrapper form.shiping_form button:not(:last-child),
+form#cupon_form button:not(:last-child) {
   background: var(--primary-color);
   color: var(--secondary-color);
   transition: .6s;
 }
 
-.rate_mini_popup .rate_wrapper form.shiping_form button:not(:last-child):hover ,form#cupon_form button:not(:last-child):hover{
+.rate_mini_popup .rate_wrapper form.shiping_form button:not(:last-child):hover,
+form#cupon_form button:not(:last-child):hover {
   background: var(--secondary-color);
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   transition: .6s;
 }
+
 .discount_mini_popup {
   width: 100%;
   position: fixed;
@@ -1095,20 +1135,34 @@ ul.category_dropdown {
   gap: 10px;
 }
 
-.discount_mini_popup .discount_wrapper > div >span {
+.discount_mini_popup .discount_wrapper>div>span {
   color: var(--primary-color);
   font-size: 20px;
 }
 
-.discount_mini_popup .discount_wrapper > div >p {
+.discount_mini_popup .discount_wrapper>div>p {
   color: #333;
   font-size: 14px;
   font-weight: 500;
 }
-.discount_mini_popup .discount_wrapper > p {
+
+.discount_mini_popup .discount_wrapper>p {
   font-size: 14px;
   margin-bottom: 10px;
 }
+
 .discount_mini_popup .discount_wrapper form#cupon_form input {
   margin-bottom: 10px;
+}
+
+.copy_coupon{
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 15% 49%, 0% 0%);
+  width: 100px;
+  padding: 3px 0;
+  background-color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 500;
+  justify-content: center;
+  color: var(--primary-color);
+  cursor: pointer;
 }

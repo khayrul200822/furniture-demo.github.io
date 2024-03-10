@@ -54,7 +54,9 @@ mobile_menu_close.addEventListener("click", () => {
     mobile_menu_popup.style.animation = "slide_out 1s ease-in  forwards"
 
 })
-
+$(".scroll_close").on("click", () => {
+    $(".screen_offer").fadeOut(500);
+})
 //dropdwon handler 
 // $(".main_menu li").on("mouseover", () => {
 //     $(".dropdown_menu").css("visibility","visible")

@@ -1936,7 +1936,7 @@ button.mobile_menu_btn:hover {
   left: 0;
   transform: translate(0px, 110%);
   width: 900px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   visibility: hidden;
   opacity: 0;
   transition: .6s;
@@ -2019,7 +2019,28 @@ button.mobile_menu_btn:hover {
   transition: .6s;
   transform: translate(0px, 100%);
 }
-
+.screen_offer {
+  width: 500px;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 35px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
+.scroll_close {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 18px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  right: 10px;
+  cursor: pointer;
+}
 
 
 
@@ -2048,7 +2069,9 @@ button.mobile_menu_btn:hover {
     background: var(--primary-color);
     color: var(--secondary-color);
   }
-
+  .screen_offer {
+    width: calc(100% - 100px);
+  }
   .user_popup .user_popup_wrapper {
     width: calc(100% - 40px);
     display: block !important;

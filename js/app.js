@@ -112,15 +112,15 @@ signup_tab.on("click", () => {
     para_text.text("Login here by filling you're username and password.")
 });
 
- // accordian script
- $(".accordion-content").css("display", "none");
+// accordian script
+$(".accordion-content").css("display", "none");
 
- $(".accordion-title").click(function () {
+$(".accordion-title").click(function () {
     $(".accordion-title").not(this).removeClass("open");
     $(".accordion-title").not(this).next().slideUp(300);
     $(this).toggleClass("open");
     $(this).next().slideToggle(300);
- });
+});
 
 $(".menu_close").on("click", () => {
 
@@ -313,3 +313,43 @@ banner_close_button.addEventListener("click", () => {
     banner_area.style.opacity = "0"
     banner_area.style.animation = "hide .2s ease-in .2s alternate forwards"
 })
+
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    }
+});
+
+var swiper = new Swiper(".mySwiper2", {
+    spaceBetween: 5,
+    slidesPerView: 2,
+    navigation: {
+        nextEl: ".swiper-button-next2",
+        prevEl: ".swiper-button-prev2",
+    },
+    breakpoints: {
+        500: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+        },
+        600: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        767: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 7,
+            spaceBetween: 20,
+        }
+    }
+});

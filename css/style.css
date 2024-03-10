@@ -1928,9 +1928,74 @@ button.mobile_menu_btn:hover {
   transform: translate(0, 100%);
   transition: .6s;
 }
+.mega_menu {
+  position: absolute;
+  bottom: 0;
+  transform: translate(0px, 110%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 850px;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .6s;
+}
+.mega_menu .single_mega_menu > b {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: inline-block;
+}
 
+.mega_menu .single_mega_menu > ul {
+  padding: 0;
+}
 
+.mega_menu .single_mega_menu > ul > li > a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  padding: 3px 0px;
+  display: inline-block;
+  transition: .6s;
+}
 
+.mega_menu .single_mega_menu > ul > li > a:hover {
+  color: var(--primary-color);
+  transition: .6s;
+  transform: translate(10px, 0px);
+}
+
+.mega_menu .single_mega_menu .mega_menu_product {
+  position: relative;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  height: 260px;
+  margin-top: 34px;
+}
+
+.mega_menu .single_mega_menu .mega_menu_product > a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 0;
+  width: 150px;
+  text-align: center;
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  bottom: 20px;
+}
+.bottom_header ul.main_menu>li:hover .mega_menu {
+  visibility: visible;
+  opacity: 1;
+  transition: .6s;
+  transform: translate(0px, 100%);
+}
 
 
 

@@ -5,6 +5,62 @@ const product_popup = document.querySelector(".top_pick_popup");
 const product_popup_wrapper = document.querySelector(".top_pick_wrapper");
 const product_popup_close = document.querySelector(".popup_close");
 
+const user_popup_close = document.querySelector(".user_popu_close");
+const user_popup_open = document.querySelector(".user_btn");
+const user_popup_area = document.querySelector(".user_popup ");
+const user_popup_main = document.querySelector(".user_popup_wrapper ");
+
+const mobile_search_close = document.querySelector(".sm_search_close")
+const mobile_search_popup = document.querySelector(".mobile_search_bar")
+const mobile_search_wrapper = document.querySelector(".search_bar_wrapper")
+const mobile_search_open = document.querySelector(".mobile_search_btn")
+
+mobile_search_open.addEventListener("click", () => {
+    mobile_search_wrapper.style.animation = "slide_right 1s ease-in forwards"
+    mobile_search_popup.style.animation = "slide_right2 1s ease-in forwards"
+})
+
+mobile_search_close.addEventListener("click", () => {
+    mobile_search_wrapper.style.animation = "slide_right3 1s ease-in  forwards"
+    mobile_search_popup.style.animation = "slide_out 1s ease-in  forwards"
+
+})
+
+user_popup_open.addEventListener("click", () => {
+    user_popup_main.style.animation = "slide_right 1s ease-in forwards"
+    user_popup_area.style.animation = "slide_right2 1s ease-in forwards"
+})
+
+user_popup_close.addEventListener("click", () => {
+    user_popup_main.style.animation = "slide_right3 1s ease-in  forwards"
+    user_popup_area.style.animation = "slide_out 1s ease-in  forwards"
+
+})
+
+
+const mobile_menu_close = document.querySelector(".menu_close")
+const mobile_menu_popup = document.querySelector(".mobile_menu_popup")
+const mobile_menu_wrapper = document.querySelector(".mobile_menu")
+const mobile_menu_open = document.querySelector(".mobile_menu_btn")
+
+
+mobile_menu_open.addEventListener("click", () => {
+    mobile_menu_wrapper.style.animation = "slide_right 1s ease-in forwards"
+    mobile_menu_popup.style.animation = "slide_right2 1s ease-in forwards"
+})
+
+mobile_menu_close.addEventListener("click", () => {
+    mobile_menu_wrapper.style.animation = "slide_left 1s ease-in  forwards"
+    mobile_menu_popup.style.animation = "slide_out 1s ease-in  forwards"
+
+})
+
+//dropdwon handler 
+// $(".main_menu li").on("mouseover", () => {
+//     $(".dropdown_menu").css("visibility","visible")
+//     $(".dropdown_menu").css("opacity","1")
+// })
+
 
 window.addEventListener("load", () => {
     setTimeout(() => {
@@ -20,6 +76,51 @@ window.addEventListener("load", () => {
         product_popup.style.animation = "slide_out 1s ease-in  forwards"
 
     })
+
+})
+
+//user signin & signup handler
+let login_text = $(".user_welcome")
+let para_text = $(".user_gide")
+let login_tab = $(".login_tab")
+let signup_tab = $(".signup_tab")
+let login_form = $(".login_wrapper")
+let signup_form = $(".register_wrapper")
+
+login_tab.on("click", () => {
+    login_form.css("animation", "slide_right 1s ease-in forwards");
+    signup_form.css("animation", "slide_right3 1s ease-in forwards");
+    login_tab.css("display", "none")
+    login_tab.css("position", "absolute")
+    signup_tab.css("position", "relative")
+    signup_tab.css("display", "block")
+    login_text.text("Join With Us")
+    para_text.text("Fill up personal information and start journey with us.")
+    // signup_form.fadeOut();
+    // login_form.fadeTo();
+});
+signup_tab.on("click", () => {
+    signup_form.css("animation", "slide_right 1s ease-in forwards");
+    login_form.css("animation", "slide_right3 1s ease-in forwards");
+    signup_tab.css("display", "none")
+    signup_tab.css("position", "absolute")
+    login_tab.css("position", "relative")
+    login_tab.css("display", "block")
+    login_text.text("Welcome Back!")
+    para_text.text("Login here by filling you're username and password.")
+});
+
+ // accordian script
+ $(".accordion-content").css("display", "none");
+
+ $(".accordion-title").click(function () {
+    $(".accordion-title").not(this).removeClass("open");
+    $(".accordion-title").not(this).next().slideUp(300);
+    $(this).toggleClass("open");
+    $(this).next().slideToggle(300);
+ });
+
+$(".menu_close").on("click", () => {
 
 })
 
@@ -86,7 +187,6 @@ coupon_icon.addEventListener("click", () => {
         })
         .catch((err) => {
             // Handle any errors, such as browser support or permission issues
-            console.error('Unable to copy text to clipboard', err);
         });
 });
 //side cart hanlder

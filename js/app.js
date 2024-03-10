@@ -62,7 +62,10 @@ $(".scroll_close").on("click", () => {
 //     $(".dropdown_menu").css("visibility","visible")
 //     $(".dropdown_menu").css("opacity","1")
 // })
-
+//section toggle hanlder
+$(".section_close").on("click", () => {
+    $(".popular_category").fadeOut();
+})
 
 window.addEventListener("load", () => {
     setTimeout(() => {

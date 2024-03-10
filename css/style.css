@@ -2236,6 +2236,33 @@ button.mobile_menu_btn:hover {
   opacity: 0;
 }
 
+.popular_category_wrapper .c_slider_right {
+  position: relative;
+}
+
+.popular_category_wrapper .section_close {
+  cursor: pointer;
+  color: #333;
+  font-size: 18px;
+  transition: .6s;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background-color: var(--light-color);
+  border-radius: 50%;
+}
+
+.popular_category_wrapper .section_close>svg {
+  transition: .6s;
+}
+
+.popular_category_wrapper .section_close:hover>svg {
+  color: var(--primary-color);
+  transform: rotate(180deg);
+  transition: .6s;
+}
+
 .popular_category_wrapper a {
   text-decoration: none;
 }
@@ -2250,9 +2277,18 @@ button.mobile_menu_btn:hover {
   transition: .6s;
   opacity: 1;
 }
-
-section.popular_category {
+header {
+  position: relative;
+}
+.popular_category {
   padding: 30px 0px;
+  width: calc(100% - 30px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
 }
 
 .category_slider_header h2 {

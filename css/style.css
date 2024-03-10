@@ -1919,6 +1919,7 @@ button.mobile_menu_btn:hover {
   transform: translate(0px, 110%);
   visibility: hidden;
   opacity: 0;
+  z-index: 9;
 }
 
 .bottom_header ul.main_menu>li>a+ul.dropdown_menu>li>a {
@@ -1955,6 +1956,8 @@ button.mobile_menu_btn:hover {
   opacity: 0;
   transition: .6s;
   height: 370px;
+  z-index: 9;
+  background: var(--secondary-color);
 }
 
 .mega_menu_wrapper {

@@ -1893,7 +1893,9 @@ button.mobile_menu_btn:hover {
   transition: .6s;
   color: var(--primary-color);
 }
-
+.bottom_header {
+  border-bottom: 1px solid var(--light-color);
+}
 .bottom_header ul.main_menu>li>a+ul.dropdown_menu {
   font-size: 14px;
   padding: 15px;

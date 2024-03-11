@@ -84,6 +84,83 @@
             </div>
         </div>
     </div>
+    <!--side category-->
+    <div class="side_category">
+        <div class="category_bg"></div>
+        <div class="side_category_wrapper">
+            <div class="side_category_close">
+                <button><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="side_category_header">
+                <form class="category_searchbar">
+                    <input type="text" id="category_searchbar" required>
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="side_title d-flex align-items-center gap-2">
+                <span><i class="fa-solid fa-list"></i></span>
+                <b>All Categories</b>
+            </div>
+            <ul class="side_category_body">
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/chair.png" alt="category_icon">
+                        </span>
+                        Chair</a>
+                </li>
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/living-room.png" alt="category_icon">
+                        </span>
+                        Furniture</a>
+                </li>
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/double-bed.png" alt="category_icon">
+                        </span>
+                        Bed</a>
+                </li>
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/open-door.png" alt="category_icon">
+                        </span>
+                        Door</a>
+                </li>
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/armchair.png" alt="category_icon">
+                        </span>
+                        Sofa</a>
+                </li>
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/cupboard.png" alt="category_icon">
+                        </span>
+                        Cupboard</a>
+                </li>
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/kitchen.png" alt="category_icon">
+                        </span>
+                        Accessories</a>
+                </li>
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/furniture.png" alt="category_icon">
+                        </span>
+                        Bedroom</a>
+                </li>
+                <li class="list-unstyled "><a href="#">
+                        <span class="me-2">
+                            <img class="img-fluid" src="img/curtains.png" alt="category_icon">
+                        </span>
+                        Window</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <!--small device search bar-->
     <div class="mobile_search_bar">
         <div class="sarch_bar_bg"></div>
@@ -429,93 +506,194 @@
                     tempora</p>
             </div>
             <div class="popup_product_container">
-                <div class="single_product">
-                    <div class="product_img">
-                        <img class="img-fluid" src="img/product-01.png" alt="product image">
-                    </div>
-                    <div class="product_content">
-                        <h3><a href="#">Eames Plastic Side Chair</a></h3>
-                        <div class="review_div d-flex align-items-center gap-3">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                <div class="swiper mySwiper3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="single_product">
+                                <div class="product_img">
+                                    <img class="img-fluid" src="img/product-01.png" alt="product image">
+                                    <div class="options">
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button><i class="fa-solid fa-layer-group"></i></button>
+                                        <button><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="#">Eames Plastic Side Chair</a></h3>
+                                    <div class="review_div d-flex align-items-center justify-content-between">
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>(<span>5</span>) reviews</p>
+                                    </div>
+                                    <div class="price d-flex align-items-center gap-2">
+                                        <span>$80</span>
+                                        <del>$120</del>
+                                    </div>
+                                    <button class="popup_cart">Add To Cart</button>
+                                </div>
                             </div>
-                            <p>(<span>5</span>) reviews</p>
                         </div>
-                        <div class="price d-flex align-items-center gap-2">
-                            <span>$80</span>
-                            <del>$120</del>
+                        <div class="swiper-slide">
+                            <div class="single_product">
+                                <div class="product_img">
+                                    <img class="img-fluid" src="img/product-01.png" alt="product image">
+                                    <div class="options">
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button><i class="fa-solid fa-layer-group"></i></button>
+                                        <button><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="#">Eames Plastic Side Chair</a></h3>
+                                    <div class="review_div d-flex align-items-center justify-content-between">
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>(<span>5</span>) reviews</p>
+                                    </div>
+                                    <div class="price d-flex align-items-center gap-2">
+                                        <span>$80</span>
+                                        <del>$120</del>
+                                    </div>
+                                    <button class="popup_cart">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single_product">
+                                <div class="product_img">
+                                    <img class="img-fluid" src="img/product-01.png" alt="product image">
+                                    <div class="options">
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button><i class="fa-solid fa-layer-group"></i></button>
+                                        <button><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="#">Eames Plastic Side Chair</a></h3>
+                                    <div class="review_div d-flex align-items-center justify-content-between">
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>(<span>5</span>) reviews</p>
+                                    </div>
+                                    <div class="price d-flex align-items-center gap-2">
+                                        <span>$80</span>
+                                        <del>$120</del>
+                                    </div>
+                                    <button class="popup_cart">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single_product">
+                                <div class="product_img">
+                                    <img class="img-fluid" src="img/product-01.png" alt="product image">
+                                    <div class="options">
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button><i class="fa-solid fa-layer-group"></i></button>
+                                        <button><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="#">Eames Plastic Side Chair</a></h3>
+                                    <div class="review_div d-flex align-items-center justify-content-between">
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>(<span>5</span>) reviews</p>
+                                    </div>
+                                    <div class="price d-flex align-items-center gap-2">
+                                        <span>$80</span>
+                                        <del>$120</del>
+                                    </div>
+                                    <button class="popup_cart">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single_product">
+                                <div class="product_img">
+                                    <img class="img-fluid" src="img/product-01.png" alt="product image">
+                                    <div class="options">
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button><i class="fa-solid fa-layer-group"></i></button>
+                                        <button><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="#">Eames Plastic Side Chair</a></h3>
+                                    <div class="review_div d-flex align-items-center justify-content-between">
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>(<span>5</span>) reviews</p>
+                                    </div>
+                                    <div class="price d-flex align-items-center gap-2">
+                                        <span>$80</span>
+                                        <del>$120</del>
+                                    </div>
+                                    <button class="popup_cart">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single_product">
+                                <div class="product_img">
+                                    <img class="img-fluid" src="img/product-01.png" alt="product image">
+                                    <div class="options">
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button><i class="fa-solid fa-layer-group"></i></button>
+                                        <button><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="#">Eames Plastic Side Chair</a></h3>
+                                    <div class="review_div d-flex align-items-center justify-content-between">
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <p>(<span>5</span>) reviews</p>
+                                    </div>
+                                    <div class="price d-flex align-items-center gap-2">
+                                        <span>$80</span>
+                                        <del>$120</del>
+                                    </div>
+                                    <button class="popup_cart">Add To Cart</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-button-prev swiper-button-prev3"></div>
+                    <div class="swiper-button-next swiper-button-next3"></div>
                 </div>
-                <div class="single_product">
-                    <div class="product_img">
-                        <img class="img-fluid" src="img/product-02.png" alt="product image">
-                    </div>
-                    <div class="product_content">
-                        <h3><a href="#">Eames Plastic Side Chair</a></h3>
-                        <div class="review_div d-flex align-items-center gap-3">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p>(<span>5</span>) reviews</p>
-                        </div>
-                        <div class="price d-flex align-items-center gap-2">
-                            <span>$80</span>
-                            <del>$120</del>
-                        </div>
-                    </div>
-                </div>
-                <div class="single_product">
-                    <div class="product_img">
-                        <img class="img-fluid" src="img/product-03.png" alt="product image">
-                    </div>
-                    <div class="product_content">
-                        <h3><a href="#">Eames Plastic Side Chair</a></h3>
-                        <div class="review_div d-flex align-items-center gap-3">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p>(<span>5</span>) reviews</p>
-                        </div>
-                        <div class="price d-flex align-items-center gap-2">
-                            <span>$80</span>
-                            <del>$120</del>
-                        </div>
-                    </div>
-                </div>
-                <div class="single_product">
-                    <div class="product_img">
-                        <img class="img-fluid" src="img/product-04.png" alt="product image">
-                    </div>
-                    <div class="product_content">
-                        <h3><a href="#">Eames Plastic Side Chair</a></h3>
-                        <div class="review_div d-flex align-items-center gap-3">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p>(<span>5</span>) reviews</p>
-                        </div>
-                        <div class="price d-flex align-items-center gap-2">
-                            <span>$80</span>
-                            <del>$120</del>
-                        </div>
-                    </div>
+                <div class="all_product d-flex mt-4 align-items-center justify-content-center">
+                    <a href="#">View All Product</a>
                 </div>
             </div>
         </div>
@@ -1207,6 +1385,7 @@
         </div>
     </header>
 
+      
     <!--script-->
     <script src="js/jquery.min.js"></script>
     <script src="js/all.min.js"></script>

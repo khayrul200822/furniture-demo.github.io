@@ -38,6 +38,22 @@ user_popup_close.addEventListener("click", () => {
 })
 
 
+const side_category_close = document.querySelector(".side_category_close button")
+const side_category_popup = document.querySelector(".side_category")
+const side_category_wrapper = document.querySelector(".side_category_wrapper")
+const side_category_open = document.querySelector(".category_container button")
+
+side_category_open.addEventListener("click", () => {
+    side_category_wrapper.style.animation = "slide_right 1s ease-in forwards"
+    side_category_popup.style.animation = "slide_right2 1s ease-in forwards"
+})
+
+side_category_close.addEventListener("click", () => {
+    side_category_wrapper.style.animation = "slide_left 1s ease-in  forwards"
+    side_category_popup.style.animation = "slide_out 1s ease-in  forwards"
+
+})
+
 const mobile_menu_close = document.querySelector(".menu_close")
 const mobile_menu_popup = document.querySelector(".mobile_menu_popup")
 const mobile_menu_wrapper = document.querySelector(".mobile_menu")
@@ -352,6 +368,30 @@ var swiper = new Swiper(".mySwiper2", {
         },
         1200: {
             slidesPerView: 7,
+            spaceBetween: 20,
+        }
+    }
+});
+
+var swiper = new Swiper(".mySwiper3", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next3",
+        prevEl: ".swiper-button-prev3",
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        767: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 4,
             spaceBetween: 20,
         }
     }

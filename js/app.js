@@ -284,17 +284,18 @@ $(".delete_card").on("click", () => {
 });
 
 //item dropdown hanler
-
-$(".selected_div").each(function () {
+let s_div = $(".selected_div");
+s_div.each(function () {
     var dropdown_area = $(this).siblings(".item_dropdown");
 
     $(this).on("click", function () {
         // Close dropdowns of all other item wrappers
-        $(".selected_div").not($(this)).siblings(".item_dropdown").fadeOut();
+        s_div.not($(this)).siblings(".item_dropdown").fadeOut();
 
         // Toggle the dropdown of the current item wrapper
         dropdown_area.fadeToggle();
     });
+
 });
 
 $(".category_name").on("click", function () {
@@ -322,6 +323,27 @@ dropdown_item.forEach(item => {
     })
 })
 
+
+//search suggestion hanlder
+// Get the input element
+var inputElement = document.querySelector('#desktop_search');
+// Get the div_focus element
+var divFocusElement = document.querySelector('.search_suggestion');
+
+// Add focus event listener to the input element
+inputElement.addEventListener('click', function () {
+    // Show div_focus when input is focused
+    divFocusElement.classList.toggle("ss_open")
+});
+
+document.addEventListener('click', function (event) {
+    // Check if the click is outside the input element
+    if (!inputElement.contains(event.target) && !divFocusElement.contains(event.target)) {
+        // Hide div_focus when clicked outside the input
+        divFocusElement.classList.remove("ss_open")
+    }
+});
+
 //offer banner handler
 const banner_close_button = document.querySelector(".banner_close");
 const banner_area = document.querySelector(".offer_banner");
@@ -342,7 +364,7 @@ var swiper = new Swiper(".mySwiper", {
     }
 });
 
-var swiper = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".mySwiper2", {
     spaceBetween: 5,
     slidesPerView: 2,
     navigation: {
@@ -373,7 +395,7 @@ var swiper = new Swiper(".mySwiper2", {
     }
 });
 
-var swiper = new Swiper(".mySwiper3", {
+var swiper3 = new Swiper(".mySwiper3", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
@@ -392,6 +414,26 @@ var swiper = new Swiper(".mySwiper3", {
         },
         1024: {
             slidesPerView: 4,
+            spaceBetween: 20,
+        }
+    }
+});
+
+var swiper4 = new Swiper(".mySwiper4", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next4",
+        prevEl: ".swiper-button-prev4",
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        767: {
+            slidesPerView: 3,
             spaceBetween: 20,
         }
     }

@@ -355,6 +355,45 @@ banner_close_button.addEventListener("click", () => {
     banner_area.style.animation = "hide .2s ease-in .2s alternate forwards"
 })
 
+//hero section toggle handle
+const side_bar_btn = document.querySelector(".category_container button")
+const side_bar_btn_close = document.querySelector(".side_category_close button")
+const hero_section = document.querySelector(".hero_section")
+
+side_bar_btn.addEventListener("click", () => {
+    hero_section.classList.add("open_category_bar")
+    hero_section.classList.remove("close_category_bar")
+})
+side_bar_btn_close.addEventListener("click", () => {
+    hero_section.classList.add("close_category_bar")
+    hero_section.classList.remove("open_category_bar")
+})
+
+//toggle button handler
+const toggle_button = document.querySelector(".toggle_icon");
+const toggle_area = document.querySelector(".toggle_menu_wrapper");
+
+toggle_button.addEventListener("click", () => {
+    toggle_area.classList.toggle("active_menu")
+    if(toggle_area.className.includes("active_menu")){
+        toggle_button.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+    }else{
+          toggle_button.innerHTML = `<i class="fa-solid fa-ellipsis"></i>`  
+    }
+
+})
+
+//slider anvigation hanlder
+const slider_nav_close = document.querySelector(".hero_navs_close");
+const slider_nav = document.querySelector(".hero_navs")
+
+slider_nav_close.addEventListener("click", () => {
+    slider_nav.style.visibility = "hidden"
+    slider_nav.style.opacity = "0"
+})
+
+
+
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
     slidesPerView: 4,
@@ -437,4 +476,19 @@ var swiper4 = new Swiper(".mySwiper4", {
             spaceBetween: 20,
         }
     }
+});
+
+var swiper4 = new Swiper(".mySwiper5", {
+    loop: true,
+    // autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination5",
+        clickable: true,
+      },
+    navigation: {
+        nextEl: ".swiper-button-next5",
+        prevEl: ".swiper-button-prev5",
+    },
 });

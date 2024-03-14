@@ -141,16 +141,7 @@ $(".accordion-title").click(function () {
     $(this).next().slideToggle(300);
 });
 
-//custom mouse cursor
-// let cursor = document.querySelector(".cursor")
 
-// document.addEventListener("mousemove", (e) => {
-//     let x = e.clientX;
-//     let y = e.clientY;
-
-//     cursor.style.left = `${x}px`
-//     cursor.style.top = `${y}px`
-// })
 //product quantity hanlder
 
 //add to cart count
@@ -572,4 +563,34 @@ var swiper4 = new Swiper(".mySwiper11", {
     },
 });
 
-
+var swiper4 = new Swiper(".mySwiper12", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next12",
+        prevEl: ".swiper-button-prev12",
+    },
+    pagination: {
+        el: ".swiper-pagination12",
+        clickable: true,
+      },
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        767:{
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        },
+        1400: {
+            slidesPerView: 5,
+            spaceBetween: 15,
+        }
+    }
+});

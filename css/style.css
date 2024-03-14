@@ -3744,7 +3744,7 @@ section.product_section .section_slider .single_product .product_info .p_cart_bt
   height: 100%;
   border: 1px solid var(--light-color);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px 20px;
   width: calc(100% - 102px);
   border-bottom-right-radius: 50px;

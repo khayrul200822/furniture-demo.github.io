@@ -380,13 +380,12 @@ slider_nav_close.addEventListener("click", () => {
 })
 
 
-
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
     slidesPerView: 4,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next1",
+        prevEl: ".swiper-button-prev1",
     }
 });
 
@@ -563,7 +562,8 @@ var swiper4 = new Swiper(".mySwiper11", {
     },
 });
 
-var swiper4 = new Swiper(".mySwiper12", {
+var swiper12 = new Swiper(".mySwiper12", {
+    autoplay: true,
     loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
@@ -594,3 +594,55 @@ var swiper4 = new Swiper(".mySwiper12", {
         }
     }
 });
+var swiper13 = new Swiper(".mySwiper13", {
+    autoplay: true,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next13",
+        prevEl: ".swiper-button-prev13",
+    },
+    pagination: {
+        el: ".swiper-pagination13",
+        clickable: true,
+      },
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        767:{
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        },
+        1400: {
+            slidesPerView: 5,
+            spaceBetween: 15,
+        }
+    }
+});
+
+
+let isclicked = true;
+const slider_btn = document.querySelectorAll(".hero_navs_pused");
+slider_btn.forEach(btn => {
+    btn.addEventListener("click", () => {
+   
+    if(isclicked){
+         btn.innerHTML=`<i class="fa-solid fa-play"></i>`
+         swiper12.autoplay.stop();
+         swiper13.autoplay.stop();
+    }else{
+        btn.innerHTML=`<i class="fa-solid fa-pause"></i>`
+        swiper12.autoplay.start();
+        swiper13.autoplay.start();
+    };
+    isclicked = !isclicked
+})
+//
+})

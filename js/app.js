@@ -141,10 +141,6 @@ $(".accordion-title").click(function () {
     $(this).next().slideToggle(300);
 });
 
-$(".menu_close").on("click", () => {
-
-})
-
 //custom mouse cursor
 // let cursor = document.querySelector(".cursor")
 
@@ -480,7 +476,7 @@ var swiper4 = new Swiper(".mySwiper4", {
 
 var swiper4 = new Swiper(".mySwiper5", {
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
@@ -492,3 +488,88 @@ var swiper4 = new Swiper(".mySwiper5", {
         prevEl: ".swiper-button-prev5",
     },
 });
+
+var swiper4 = new Swiper(".mySwiper6", {
+    loop: true,
+    autoplay: true,
+    autoplay: {
+        delay: 2000,
+      },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next6",
+        prevEl: ".swiper-button-prev6",
+    },
+});
+var swiper4 = new Swiper(".mySwiper7", {
+    loop: true,
+    autoplay: true,
+    autoplay: {
+        delay: 2000,
+      },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next7",
+        prevEl: ".swiper-button-prev7",
+    },
+});
+
+var swiper4 = new Swiper(".mySwiper8", {
+    loop: true,
+    autoplay: true,
+    autoplay: {
+        delay: 2000,
+      },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next8",
+        prevEl: ".swiper-button-prev8",
+    },
+});
+
+var swiper4 = new Swiper(".mySwiper9", {
+    loop: true,
+    autoplay: true,
+    autoplay: {
+        delay: 2000,
+      },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next9",
+        prevEl: ".swiper-button-prev9",
+    },
+});
+
+var swiper4 = new Swiper(".mySwiper10", {
+    loop: true,
+    autoplay: true,
+    autoplay: {
+        delay: 2000,
+      },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next10",
+        prevEl: ".swiper-button-prev10",
+    },
+});
+
+var swiper4 = new Swiper(".mySwiper11", {
+    loop: true,
+    autoplay: true,
+    autoplay: {
+        delay: 2000,
+      },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next11",
+        prevEl: ".swiper-button-prev11",
+    },
+});
+
+

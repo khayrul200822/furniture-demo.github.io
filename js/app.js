@@ -466,7 +466,7 @@ var swiper4 = new Swiper(".mySwiper4", {
 
 var swiper4 = new Swiper(".mySwiper5", {
     loop: true,
-    autoplay: true,
+    // autoplay: true,
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {

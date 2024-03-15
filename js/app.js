@@ -362,13 +362,80 @@ const toggle_area = document.querySelector(".toggle_menu_wrapper");
 
 toggle_button.addEventListener("click", () => {
     toggle_area.classList.toggle("active_menu")
-    if(toggle_area.className.includes("active_menu")){
+    if (toggle_area.className.includes("active_menu")) {
         toggle_button.innerHTML = `<i class="fa-solid fa-xmark"></i>`
-    }else{
-          toggle_button.innerHTML = `<i class="fa-solid fa-ellipsis"></i>`  
+    } else {
+        toggle_button.innerHTML = `<i class="fa-solid fa-ellipsis"></i>`
     }
 
 })
+
+//sticky header
+//sticky header script
+// $(document).ready(() => {
+//     const heroSectionBottom = $("header").offset().top + $("header").outerHeight();
+//     $(window).on("scroll", () => {
+//       const scrollPosition = $(window).scrollTop();
+
+//       if (scrollPosition >= (heroSectionBottom+500)) {
+//         $("header").addClass("sticky_animation");
+//         $(".top_header").css("display","none")
+//         $(".scrolling_news").css("display","none")
+//         $(".offer_banner").css("display","none")
+//       } else {
+//         $("header").removeClass("sticky_animation");
+//         $(".top_header").css("display","block")
+//         $(".scrolling_news").css("display","block")
+//         $(".offer_banner").css("display","block")
+//       }
+//     });
+//   });
+
+const header = document.querySelector("header");
+const toggleClass = "sticky_animation";
+const top_header = document.querySelector(".top_header")
+const offer_banner = document.querySelector(".offer_banner")
+const news_section = document.querySelector(".header_news")
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 150) {
+        header.classList.add(toggleClass);
+        top_header.style.display = "none"
+        offer_banner.style.display = "none"
+        news_section.style.display = "none"
+    } else {
+        header.classList.remove(toggleClass);
+        top_header.style.display = "block"
+        offer_banner.style.display = "block"
+        news_section.style.display = "block"
+    }
+});
+
+
+//dragable content
+$( function() {
+    $( ".toggle_menu" ).draggable();
+  } );
+
+let isDark = true;
+
+//*** Dark mode & Light Mode***/
+//Dark mode and Light mode handler
+
+const mode_button = document.querySelector(".mode_btn");
+mode_button.addEventListener("click", () => {
+    if (isDark) {
+        mode_button.innerHTML = `<i class="fa-regular fa-sun"></i>`
+        document.body.classList.add("dark-them")
+    } else {
+        mode_button.innerHTML = `<i class="fa-regular fa-moon"></i>`
+        document.body.classList.remove("dark-them")
+    }
+    isDark = !isDark;
+
+})
+
 
 //slider anvigation hanlder
 const slider_nav_close = document.querySelector(".hero_navs_close");
@@ -472,7 +539,7 @@ var swiper4 = new Swiper(".mySwiper5", {
     pagination: {
         el: ".swiper-pagination5",
         clickable: true,
-      },
+    },
     navigation: {
         nextEl: ".swiper-button-next5",
         prevEl: ".swiper-button-prev5",
@@ -484,7 +551,7 @@ var swiper4 = new Swiper(".mySwiper6", {
     autoplay: true,
     autoplay: {
         delay: 2000,
-      },
+    },
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
@@ -497,7 +564,7 @@ var swiper4 = new Swiper(".mySwiper7", {
     autoplay: true,
     autoplay: {
         delay: 2000,
-      },
+    },
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
@@ -511,7 +578,7 @@ var swiper4 = new Swiper(".mySwiper8", {
     autoplay: true,
     autoplay: {
         delay: 2000,
-      },
+    },
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
@@ -525,7 +592,7 @@ var swiper4 = new Swiper(".mySwiper9", {
     autoplay: true,
     autoplay: {
         delay: 2000,
-      },
+    },
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
@@ -539,7 +606,7 @@ var swiper4 = new Swiper(".mySwiper10", {
     autoplay: true,
     autoplay: {
         delay: 2000,
-      },
+    },
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
@@ -553,7 +620,7 @@ var swiper4 = new Swiper(".mySwiper11", {
     autoplay: true,
     autoplay: {
         delay: 2000,
-      },
+    },
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
@@ -574,13 +641,13 @@ var swiper12 = new Swiper(".mySwiper12", {
     pagination: {
         el: ".swiper-pagination12",
         clickable: true,
-      },
+    },
     breakpoints: {
         576: {
             slidesPerView: 2,
             spaceBetween: 15,
         },
-        767:{
+        767: {
             slidesPerView: 3,
             spaceBetween: 15,
         },
@@ -606,13 +673,13 @@ var swiper13 = new Swiper(".mySwiper13", {
     pagination: {
         el: ".swiper-pagination13",
         clickable: true,
-      },
+    },
     breakpoints: {
         576: {
             slidesPerView: 2,
             spaceBetween: 15,
         },
-        767:{
+        767: {
             slidesPerView: 3,
             spaceBetween: 15,
         },
@@ -632,17 +699,17 @@ let isclicked = true;
 const slider_btn = document.querySelectorAll(".hero_navs_pused");
 slider_btn.forEach(btn => {
     btn.addEventListener("click", () => {
-   
-    if(isclicked){
-         btn.innerHTML=`<i class="fa-solid fa-play"></i>`
-         swiper12.autoplay.stop();
-         swiper13.autoplay.stop();
-    }else{
-        btn.innerHTML=`<i class="fa-solid fa-pause"></i>`
-        swiper12.autoplay.start();
-        swiper13.autoplay.start();
-    };
-    isclicked = !isclicked
-})
-//
+
+        if (isclicked) {
+            btn.innerHTML = `<i class="fa-solid fa-play"></i>`
+            swiper12.autoplay.stop();
+            swiper13.autoplay.stop();
+        } else {
+            btn.innerHTML = `<i class="fa-solid fa-pause"></i>`
+            swiper12.autoplay.start();
+            swiper13.autoplay.start();
+        };
+        isclicked = !isclicked
+    })
+    //
 })

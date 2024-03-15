@@ -468,7 +468,7 @@ var swiper4 = new Swiper(".mySwiper5", {
     loop: true,
     // autoplay: true,
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination5",
         clickable: true,

@@ -422,20 +422,46 @@ let isDark = true;
 
 //*** Dark mode & Light Mode***/
 //Dark mode and Light mode handler
+$(document).ready(function() {
+    const title_color = $(".popup_title > h2");
+    const title_color2 = $(".popup_close");
+    const title_color3 = $(".category_slider_header h2");
+    const news_sec = $(".newsletter_section");
+    const title_colorB = $(".section_slider .single_product");
+    const top_header_border = $(".top_header");
+    const main_header_border = $(".main_header");
+    const hero_left_title = $(".hero_left > h2");
+    const hero_left_link = $(".hero_left > a");
+    const hero_left_para = $(".hero_left > p");
+    const category_section_bg = $(".larg_category_section");
+    const scroll_div = $(".category_slider .scroll div");
+    const title_color5 = $(".newsletter_wrapper h3");
+    const title_color4 = $(".section_close");
+    const mode_button = $(".mode_btn");
+    const top_header= $(".top_header_wrapper .right");
+    let isDark = true;
 
-const mode_button = document.querySelector(".mode_btn");
-mode_button.addEventListener("click", () => {
-    if (isDark) {
-        mode_button.innerHTML = `<i class="fa-regular fa-sun"></i>`
-        document.body.classList.add("dark-them")
-    } else {
-        mode_button.innerHTML = `<i class="fa-regular fa-moon"></i>`
-        document.body.classList.remove("dark-them")
-    }
-    isDark = !isDark;
+    mode_button.on("click", function() {
+        if (isDark) {
+            mode_button.html(`<i class="fa-regular fa-sun"></i>`);
+            $("body").addClass("dark-them");
+            // title_color.css("color", "var(--sub-text-color)");
+            // title_color2.css("color", "var(--sub-text-color)");
+            // title_color3.css("color", "var(--text-color)");
+            // title_color4.addClass("dark");
 
-})
+        } else {
+            mode_button.html(`<i class="fa-regular fa-moon"></i>`);
+            $("body").removeClass("dark-them");
+            // title_color.css("color", "var(--text-color)");
+            // title_color2.css("color", "var(--text-color)");
+            // title_color3.css("color", "var(--sub-text-color)");
+            // title_color4.removeClass("dark");
 
+        }
+        isDark = !isDark;
+    });
+});
 
 //slider anvigation hanlder
 const slider_nav_close = document.querySelector(".hero_navs_close");

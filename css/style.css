@@ -228,7 +228,7 @@ a {
 }
 
 .top_header {
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--light-color);
   background: var(
   --bg-color);
 }
@@ -278,7 +278,7 @@ a {
 
 .top_header .top_header_wrapper .right {
   font-size: 14px;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 .top_header .top_header_wrapper .right .item_wrapper .item_dropdown {
@@ -316,7 +316,7 @@ a {
 }
 
 .main_header {
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--light-color);
   background: var(--bg-color);
 }
 
@@ -367,7 +367,7 @@ ul.category_dropdown li:hover {
   height: 46px;
   width: 600px;
   border-radius: 50px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--sub-color);
   position: relative;
   overflow: hidden;
 }
@@ -467,7 +467,7 @@ ul.category_dropdown li:hover {
   border: 1px solid transparent;
   font-size: 14px;
   padding: 0 20px;
-  color: var(--text-color);
+  color: var(--sub-text-color);
   padding-right: 45px;
   height: 100%;
   background: var(
@@ -631,7 +631,7 @@ ul.category_dropdown li:hover {
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 10px;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 .top_pick_popup .top_pick_wrapper .popup_title>p {
@@ -712,7 +712,7 @@ ul.category_dropdown li:hover {
 .top_pick_popup .popup_close {
   position: absolute;
   right: 20px;
-  color: var(--text-color);
+  color: var(--sub-text-color);
   top: 10px;
   font-size: 20px;
   transition: .6s;
@@ -853,7 +853,7 @@ ul.category_dropdown li:hover {
   outline: none;
   border: 1px solid transparent;
   background: white;
-  color: var(--bg-color);
+  color: var(--sub-text-color);
   transition: .6s;
 }
 
@@ -865,7 +865,7 @@ ul.category_dropdown li:hover {
   width: 50px;
   height: 100%;
   border: none;
-  color: var(--secondary-color);
+  color: var(--sub-text-color);
   outline: none;
   text-align: center;
   font-size: 14px;
@@ -1374,7 +1374,7 @@ form#cupon_form button:not(:last-child):hover {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 .user_popup .user_popup_wrapper .left_side .by_ref a {
@@ -1559,7 +1559,7 @@ form#cupon_form button:not(:last-child):hover {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .mobile_search_bar .sarch_bar_bg {
@@ -1888,7 +1888,7 @@ ul.main_menu {
   width: 12px;
   height: 2px;
   transform: rotate(90deg);
-  background: black;
+  background: var(--sub-text-color);
   transition: all .3s ease-in-out;
 }
 
@@ -2008,7 +2008,7 @@ button.menu_close svg {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 9999;
   visibility: hidden;
   opacity: 0;
 }
@@ -2116,7 +2116,7 @@ button.mobile_menu_btn:hover {
   font-weight: 500;
   margin-bottom: 10px;
   display: inline-block;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 .mega_menu .single_mega_menu>ul {
@@ -2229,7 +2229,7 @@ button.mobile_menu_btn:hover {
   width: 30px !important;
   height: 30px !important;
   border-radius: 50%;
-  background: var(--bg-color);
+  background: var(--light-color);
   position: unset;
   margin: 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -2255,6 +2255,7 @@ button.mobile_menu_btn:hover {
   width: 100%;
   height: 150px;
   overflow: hidden;
+  background: var(--light-color);
 }
 
 .viewd_product .viewed_product_wrapper .viewed_single_product .vs_product_info {
@@ -2263,7 +2264,7 @@ button.mobile_menu_btn:hover {
 
 .viewd_product .viewed_product_wrapper .viewed_single_product .vs_product_info>a {
   font-size: 12px;
-  color: #666;
+  color: var(--sub-text-color);
   text-decoration: none;
   margin-bottom: 5px;
   display: inline-block;
@@ -2323,6 +2324,7 @@ button.mobile_menu_btn:hover {
 
 .viewed_header {
   display: flex;
+  margin-bottom: 15px;
 }
 
 .viewed_header>a {
@@ -2396,7 +2398,7 @@ button.mobile_menu_btn:hover {
 
 .popular_category_wrapper .section_close {
   cursor: pointer;
-  color: var(--bg-color);
+  color: var(--sub-text-color);
   font-size: 18px;
   transition: .6s;
   width: 30px;
@@ -2454,7 +2456,7 @@ header {
 .category_slider_header h2 {
   font-size: 20px;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 .category_slider_header {
@@ -2537,7 +2539,6 @@ header {
 
 .top_pick_popup .product_content {
   padding: 15px;
-  border: 1px solid var(--light-color);
 }
 
 .top_pick_popup .top_pick_wrapper .popup_product_container .single_product .product_img option>button {
@@ -2612,9 +2613,9 @@ header {
   transition: .6s;
 }
 
-.single_product {
+.section_slider .single_product {
   position: relative;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--sub-color);
   margin: 0px;
   transition: .6s;
   background: var(--secondary-color);
@@ -2994,7 +2995,7 @@ section.hero_section {
 .hero_left>a {
   font-size: 14px;
   text-decoration: none;
-  color: var(--bg-color);
+  color: var(--sub-text-color);
   display: inline-block;
   margin-bottom: 15px;
   font-weight: 500;
@@ -3008,14 +3009,14 @@ section.hero_section {
   font-size: 40px;
   line-height: 3rem;
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--sub-text-color);
   margin-bottom: 0;
 }
 
 .hero_left>p {
   font-size: 14px;
   line-height: 1.6rem;
-  color: var(--bg-color);
+  color: var(--sub-te-color);
   padding: 15px 0px;
   margin-bottom: 25px;
 }
@@ -3247,7 +3248,7 @@ section.hero_section {
 
 .hero_navs_close {
   font-size: 18px;
-  color: var(--secondary-color);
+  color: var(--sub-text-color);
   width: 30px;
   height: 30px;
   position: relative;
@@ -3299,9 +3300,9 @@ section.hero_section {
   margin-bottom: 15px;
 }
 
-section.larg_category_section {
+.larg_category_section {
   padding: 50px 0px;
-  background: var(--bg-color);
+  background: var(--light-color);
 }
 
 
@@ -3325,7 +3326,7 @@ section.larg_category_section {
   font-size: unset;
   white-space: nowrap;
   animation-delay: -40s;
-  background: var(--bg-color);
+  background: var(--light-color);
 }
 
 .category_slider .scroll.text1 div {
@@ -3555,7 +3556,7 @@ section.larg_category_section {
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 .newsletter_wrapper h3>span {
@@ -3645,7 +3646,7 @@ section.larg_category_section {
 
 .newsletter_section {
   padding: 65px 0px;
-  background: var(--secondary-color);
+  background: var(--light-color);
 }
 
 /* product section style start*/
@@ -3876,7 +3877,7 @@ section.product_section .section_slider .single_product .product_info .p_cart_bt
 .section_title>h2 {
   font-size: 30px;
   margin: 0;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 .section_title>.slider_navs {
@@ -4077,7 +4078,9 @@ section.product_section .section_slider .single_product .product_img>.product_op
   display: block;
   transition: .6s;
 }
-
+body.dark-them .hotsport_btn{
+  animation: animation_scale2 2s linear infinite;
+}
 .hotsport_btn {
   animation: animation_scale 2s linear infinite;
   border-radius: 50%;
@@ -4094,6 +4097,15 @@ section.product_section .section_slider .single_product .product_img>.product_op
 
   100% {
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.281), 0 0 0 20px rgba(255, 255, 255, 0.164), 0 0 0 30px rgba(255, 255, 255, 0.082);
+  }
+}
+@keyframes animation_scale2 {
+  0% {
+    box-shadow: 0 0 0 0 hsl(208, 63%, 15%) , 0 0 0 10px hsla(208, 63%, 15%, 0.747), 0 0 0 20px hsla(208, 63%, 15%, 0.568);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px  hsla(208, 63%, 15%, 0.356), 0 0 0 20px hsla(208, 63%, 15%, 0.185), 0 0 0 30px hsla(208, 63%, 15%, 0.048);
   }
 }
 .product_hotsport_wrapper .hotsport_img {
@@ -4218,6 +4230,146 @@ header.sticky_animation {
       opacity: 1;
   }
 }
+.popular_category_wrapper .section_close.dark {
+  background: var(--bg-color);
+}
+/**dark mode light mode**/
+
+body.dark-them .side_cart .side_cart_wrapper .product_list .single_cart_product .product_info .quantity>button {
+  color: var(--bg-color);
+}
+
+body.dark-them .side_cart .side_cart_wrapper .product_list .single_cart_product .product_info .quantity>input {
+  color: var(--secondary-color);
+}
+
+body.dark-them .side_cart .side_cart_wrapper .cart_bottom .cart_btns>button {
+  border: 1px solid var(--primary-color);
+}
+body.dark-them .main_header .main-header_wrapper .desktop_searchbar {
+  border: 1px solid var(--secondary-color);
+}
+
+body.dark-them .main_header .main-header_wrapper .desktop_searchbar form.search_form>input {
+  color: var(--text-color);
+}
+
+body.dark-them .mega_menu .single_mega_menu>b {
+  color: var(--text-color);
+}
+
+body.dark-them .hero_navs_close {
+  color: var(--secondary-color);
+}
+
+body.dark-them .section_title>h2 {
+  color: var(--text-color);
+}
+
+body.dark-them .newsletter_section {
+  background: var(--secondary-color);
+}
+
+body.dark-them .newsletter_wrapper h3 {
+  color: var(--text-color);
+}
+body.dark-them :where(.slider_navs .swiper-button-next1, .slider_navs .swiper-button-next2, .slider_navs .swiper-button-next4, .swiper-button-next6, .slider_navs .swiper-button-prev1, .slider_navs .swiper-button-prev2, .slider_navs .swiper-button-prev4, .swiper-button-prev6) {
+  background: var(--bg-color);
+}
+
+body.dark-them .user_popup .user_popup_wrapper .left_side h3 {
+  color: var(--text-color);
+}
+
+body.dark-them .mobile_search_bar .search_bar_wrapper .search_bar_container .down_div .recent_searh>span>a {
+  color: var(--bg-color);
+}
+
+body.dark-them .mobile_search_bar .search_bar_wrapper .search_bar_filed>input {
+  color: var(--bg-color);
+}
+
+body.dark-them .hero_left>h2 {
+  color: var(--secondary-color);
+}
+
+body.dark-them .hero_left>a {
+  color: var(--secondary-color);
+}
+
+body.dark-them .top_header {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+body.dark-them .main_header {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.bottom_header {
+  border-bottom: 1px solid var(--secondary-color);
+}
+body.dark-them .copy_coupon {
+  color: var(--text-color);
+}
+
+body.dark-them .offer_banner .offer_banner_content>span {
+  color: var(--text-color);
+}
+
+body.dark-them .section_slider .single_product {
+  border: 1px solid var(--bg-color);
+}
+
+body.dark-them section.product_section .section_slider .single_product .product_info {
+  border-top: 1px solid var(--bg-color);
+}
+
+body.dark-them .section_title {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+body.dark-them section.main_footer {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+body.dark-them .bottom_footer {
+  border-bottom: 1px solid var(--secondary-color);
+}
+.popup_product_container .single_product {
+  border: 1px solid var(--sub-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+body.dark-them .popup_product_container .single_product {
+  border: 1px solid var(--secondary-color);
+}
+body.dark-them .popular_category_wrapper .section_close {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-them :where(.slider_navs .swiper-button-next1, .slider_navs .swiper-button-next2, .slider_navs .swiper-button-next4, .swiper-button-next6, .slider_navs .swiper-button-prev1, .slider_navs .swiper-button-prev2, .slider_navs .swiper-button-prev4, .swiper-button-prev6) {
+  background: var(--bg-color) !important;
+  color: var(--text-color);
+}
+body.dark-them button.menu_close {color: var(--bg-color);}
+
+body.dark-them .side_category .side_category_wrapper ul.side_category_body>li>a>span {
+  background: var(--text-color);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+body.dark-them .side_category .side_category_wrapper ul.side_category_body>li:hover>.category_mega_menu {
+  background: var(--bg-color);
+}
+
+
+
+
+
+
 
 
 
@@ -4238,7 +4390,6 @@ header.sticky_animation {
 .main_footer {
   background-color: var(--bg-color);
   padding: 40px 0;
-  border-top: 1px solid var(--light-color);
   border-bottom: 1px solid var(--light-color);
 }
 
@@ -4385,7 +4536,6 @@ header.sticky_animation {
 
 .bottom_footer {
   padding: 20px 0px;
-  border-top: 1px solid var(--light-color);
   border-bottom: 1px solid var(--light-color);
   background: var(--bg-color);
 }

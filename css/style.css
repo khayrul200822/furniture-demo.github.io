@@ -16,6 +16,7 @@
   --secondary-color: #07141F;
    --bg-color: 	hsl(208, 63%, 15%) ;
   --sub-color: #FAE8DB;
+  --dark-text-color: #bbbbbb;
   --text-color: #fff;
   --light-color: hsl(25, 100%, 99%);
   --sub-text-color: hsl(25, 100%, 99%);
@@ -4686,7 +4687,7 @@ body.dark-them :where(.swiper-button-next15, .swiper-button-prev15) {
   background: var(--bg-color);
 }
 body.dark-them .single_blog .blog_info .blog_body >p {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them .newsletter_wrapper button, .blog_body .read_more_btn {
@@ -4694,45 +4695,47 @@ body.dark-them .newsletter_wrapper button, .blog_body .read_more_btn {
 }
 
 body.dark-them :where(.single_blog .blog_info .blog_header span) {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them .single_blog .blog_info .blog_header span {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them :where(.single_blog .blog_info .blog_header .right_blog_header .comment) {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them :where(.blog_section_title > p) {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them .testimonial_section_wrapper .title_side > p {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them .testimonial_section_wrapper .main_ts_slider .ts_pagination .ts_info > em {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them .newsletter_wrapper p {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them .main_footer .single_footer_area ul>li>a {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them .our_info .single_info {
-  color: #bbbbbb;
+  color: var(--dark-text-color);
 }
 
 body.dark-them .copy_right_wrapper p {
   color: var(--text-color);
 }
-
+body.dark-them :where(.swiper-button-prev16, .swiper-button-next16) {
+  background: var(--bg-color);
+}
 
 
 

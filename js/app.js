@@ -721,6 +721,61 @@ var swiper13 = new Swiper(".mySwiper13", {
 });
 
 
+var swiper = new Swiper(".mySwiper14", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        991: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1400: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
+  });
+  var swiper15 = new Swiper(".mySwiper15", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next15",
+      prevEl: ".swiper-button-prev15",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+
+  var swiper13 = new Swiper(".mySwiper16", {
+    autoplay: true,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next16",
+        prevEl: ".swiper-button-prev16",
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+
+    }
+});
+
+
+
 let isclicked = true;
 const slider_btn = document.querySelectorAll(".hero_navs_pused");
 slider_btn.forEach(btn => {

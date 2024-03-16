@@ -4737,7 +4737,9 @@ body.dark-them :where(.swiper-button-prev16, .swiper-button-next16) {
   background: var(--bg-color);
 }
 
-
+body.dark-them section.product_section .section_slider .single_product .product_info .info_header>a{
+  color: var(--dark-text-color);
+}
 
 
 

@@ -73,11 +73,7 @@ mobile_menu_close.addEventListener("click", () => {
 $(".scroll_close").on("click", () => {
     $(".screen_offer").fadeOut(500);
 })
-//dropdwon handler 
-// $(".main_menu li").on("mouseover", () => {
-//     $(".dropdown_menu").css("visibility","visible")
-//     $(".dropdown_menu").css("opacity","1")
-// })
+
 //section toggle hanlder
 $(".section_close").on("click", () => {
     $(".popular_category").fadeOut();
@@ -97,6 +93,24 @@ window.addEventListener("load", () => {
         product_popup.style.animation = "slide_out 1s ease-in  forwards"
 
     })
+
+})
+
+//video popup hanlder 
+const video_close_btn = document.querySelector(".video_popup_close");
+const video_open_btn = document.querySelectorAll(".video_btn");
+const video_popup_area= document.querySelector(".product_video_popup");
+const video_wrapper = document.querySelector(".video_popup_wrapper");
+
+video_open_btn.forEach(btn => {
+    btn.addEventListener("click", () => {
+    video_wrapper.style.animation = "slide_right 1s ease-in forwards"
+    video_popup_area.style.animation = "slide_right2 1s ease-in forwards"
+})
+})  
+video_close_btn.addEventListener("click", () => {
+    video_wrapper.style.animation = "slide_right3 1s ease-in  forwards"
+    video_popup_area.style.animation = "slide_out 1s ease-in  forwards"
 
 })
 
@@ -471,6 +485,10 @@ slider_nav_close.addEventListener("click", () => {
     slider_nav.style.visibility = "hidden"
     slider_nav.style.opacity = "0"
 })
+
+
+//video popup handler
+
 
 
 var swiper = new Swiper(".mySwiper", {

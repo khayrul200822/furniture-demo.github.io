@@ -96,6 +96,45 @@ window.addEventListener("load", () => {
 
 })
 
+const variation_close_btn = document.querySelector(".variation_close");
+const variation_open_btn = document.querySelectorAll(".varient_selection button");
+const variation_area = document.querySelector(".variation_popup")
+const variation_wrapper = document.querySelector(".variation_wrapper")
+
+
+variation_open_btn.forEach(btn => {
+    btn.addEventListener("click", () => {
+        variation_wrapper.style.animation = "slide_right 1s ease-in forwards"
+      variation_area.style.animation = "slide_right2 1s ease-in forwards"
+    })
+  })
+  variation_close_btn.addEventListener("click", () => {
+    variation_wrapper.style.animation = "slide_right3 1s ease-in forwards"
+    variation_area.style.animation = "slide_out 1s ease-in forwards"
+  
+  })
+
+
+//quick view popup
+const quick_view_area = document.querySelector(".quick_view_popup")
+const quick_view_btn = document.querySelector(".close_quick_view")
+
+const quick_view_wrapper= document.querySelector(".quick_view_wrapper")
+const quick_view_open = document.querySelectorAll(".quick_view");
+quick_view_open.forEach(btn => {
+  btn.addEventListener("click", () => {
+    quick_view_wrapper.style.animation = "slide_right 1s ease-in forwards"
+    quick_view_area.style.animation = "slide_right2 1s ease-in forwards"
+  })
+})
+quick_view_btn.addEventListener("click", () => {
+    quick_view_wrapper.style.animation = "slide_right3 1s ease-in forwards"
+    quick_view_area.style.animation = "slide_out 1s ease-in forwards"
+
+})
+
+
+
 //video popup hanlder 
 const video_close_btn = document.querySelector(".video_popup_close");
 const video_open_btn = document.querySelectorAll(".video_btn");
@@ -222,23 +261,6 @@ $(".cart_close").on("click", () => {
     $(".side_cart").fadeToggle();
 });
 
-// document.addEventListener("mousemove", (e) => {
-//     let cursor = document.querySelector(".cursor")
-//     if (!$(".side_cart_wrapper").has(e.target).length && !$(".cart_close").has(e.target).length && $(".side_cart").has(e.target).length) {
-
-
-//             let x = e.clientX;
-//             let y = e.clientY;
-
-//             cursor.style.left = `${x}px`
-//             cursor.style.top = `${y}px`
-//             cursor.style.display = "block"
-//     } else {
-//         cursor.style.display = "none"
-//     }
-// })
-
-//side cart handler
 
 $(document).on("click", (e) => {
     if (!$(".side_cart_wrapper").has(e.target).length && !$(".cart_close").has(e.target).length && $(".side_cart").has(e.target).length) {
@@ -384,27 +406,9 @@ toggle_button.addEventListener("click", () => {
 
 })
 
-//sticky header
-//sticky header script
-// $(document).ready(() => {
-//     const heroSectionBottom = $("header").offset().top + $("header").outerHeight();
-//     $(window).on("scroll", () => {
-//       const scrollPosition = $(window).scrollTop();
 
-//       if (scrollPosition >= (heroSectionBottom+500)) {
-//         $("header").addClass("sticky_animation");
-//         $(".top_header").css("display","none")
-//         $(".scrolling_news").css("display","none")
-//         $(".offer_banner").css("display","none")
-//       } else {
-//         $("header").removeClass("sticky_animation");
-//         $(".top_header").css("display","block")
-//         $(".scrolling_news").css("display","block")
-//         $(".offer_banner").css("display","block")
-//       }
-//     });
-//   });
 
+//sticky header handler
 const header = document.querySelector("header");
 const toggleClass = "sticky_animation";
 const top_header = document.querySelector(".top_header")
@@ -425,6 +429,9 @@ window.addEventListener("scroll", () => {
         news_section.style.display = "block"
     }
 });
+
+//variation popup handler
+
 
 
 //dragable content
@@ -459,23 +466,52 @@ $(document).ready(function() {
         if (isDark) {
             mode_button.html(`<i class="fa-regular fa-sun"></i>`);
             $("body").addClass("dark-them");
-            // title_color.css("color", "var(--sub-text-color)");
-            // title_color2.css("color", "var(--sub-text-color)");
-            // title_color3.css("color", "var(--text-color)");
-            // title_color4.addClass("dark");
-
         } else {
             mode_button.html(`<i class="fa-regular fa-moon"></i>`);
             $("body").removeClass("dark-them");
-            // title_color.css("color", "var(--text-color)");
-            // title_color2.css("color", "var(--text-color)");
-            // title_color3.css("color", "var(--sub-text-color)");
-            // title_color4.removeClass("dark");
-
         }
         isDark = !isDark;
     });
 });
+
+
+//variation element
+const brand_names = ['IKEA', 'COROM', 'FENDI', 'SLACK'];
+const brand_select = document.querySelectorAll(".brand_container > li");
+const brand_select_name = document.querySelector(".brand_name");
+
+brand_select.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        // Remove "selected_brand" class from all list items
+        brand_select.forEach(item => {
+            item.classList.remove("selected_brand");
+        });
+        // Add "selected_brand" class to the clicked list item
+        btn.classList.add("selected_brand");
+
+        // Display the brand name corresponding to the clicked list item
+        brand_select_name.textContent = brand_names[index];
+    });
+});
+
+const color_names = ['Pink', 'Dark Pink', 'Violet', 'Gray'];
+const color_select = document.querySelectorAll(".color_container > li");
+const color_select_name = document.querySelector(".color_name");
+
+color_select.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        // Remove "selected_brand" class from all list items
+        color_select.forEach(item => {
+            item.classList.remove("selected_color");
+        });
+        // Add "selected_brand" class to the clicked list item
+        btn.classList.add("selected_color");
+
+        // Display the brand name corresponding to the clicked list item
+        color_select_name.textContent = color_names[index];
+    });
+});
+
 
 //slider anvigation hanlder
 const slider_nav_close = document.querySelector(".hero_navs_close");
@@ -485,10 +521,6 @@ slider_nav_close.addEventListener("click", () => {
     slider_nav.style.visibility = "hidden"
     slider_nav.style.opacity = "0"
 })
-
-
-//video popup handler
-
 
 
 var swiper = new Swiper(".mySwiper", {
@@ -577,7 +609,7 @@ var swiper4 = new Swiper(".mySwiper4", {
 
 var swiper4 = new Swiper(".mySwiper5", {
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 30,
     pagination: {
@@ -792,6 +824,41 @@ var swiper = new Swiper(".mySwiper14", {
     }
 });
 
+
+var swiper = new Swiper(".mySwiper18", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        480:{
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        991: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1400: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
+  });
+  var swiper17 = new Swiper(".mySwiper17", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next17",
+      prevEl: ".swiper-button-prev17",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
 
 
 let isclicked = true;

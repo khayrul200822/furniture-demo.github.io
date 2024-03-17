@@ -5170,7 +5170,10 @@ body.dark-them .single_blog .blog_info .blog_header .right_blog_header .blog_sha
   text-align: center;
   font-size: 14px;
 }
-
+.product_option_area .quantity .quantity_wrapper>input::-webkit-inner-spin-button,
+.product_option_area .quantity .quantity_wrapper>input::-webkit-outer-spin-button{
+  appearance: none;
+}
 .product_option_area .quantity>a {
   font-size: 14px;
 }
@@ -5234,7 +5237,9 @@ body.dark-them .single_blog .blog_info .blog_header .right_blog_header .blog_sha
 .quick_view_wrapper .right_side>ul {
   margin-bottom: 10px;
 }
-
+body.dark-them .quick_view_wrapper .right_side>ul>li  span{
+  color: var(--text-color);
+}
 .quick_view_wrapper .right_side>ul>li {
   font-size: 14px;
   padding: 2px 0;

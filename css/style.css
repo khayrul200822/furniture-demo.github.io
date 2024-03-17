@@ -3124,7 +3124,24 @@ section.hero_section {
   gap: 5px;
   right: 0;
 }
-
+.toggle_menu_wrapper button:nth-child(2){
+  --i : 6
+}
+.toggle_menu_wrapper button:nth-child(3){
+  --i : 4
+}
+.toggle_menu_wrapper button:nth-child(4){
+  --i : 3
+}
+.toggle_menu_wrapper button:nth-child(5){
+  --i : 2
+}
+.toggle_menu_wrapper button:nth-child(6){
+  --i : 1
+}
+.toggle_menu_wrapper button:last-child{
+  --i : 5
+}
 .toggle_menu .toggle_icon {
   box-shadow: rgba(255, 255, 255, 0.493) 0px 7px 29px 0px;
   width: 50px;

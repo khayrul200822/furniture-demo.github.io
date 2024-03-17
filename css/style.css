@@ -3028,7 +3028,7 @@ section.hero_section {
 }
 
 .hero_left>.hero_btn span:last-child,
-.bottom_button button span:last-child {
+.bottom_button button span:last-child ,.product_option_area > a span:last-child {
   position: absolute;
   transform: translate(-30px, 0%);
   visibility: hidden;
@@ -3038,7 +3038,7 @@ section.hero_section {
 }
 
 .hero_left>.hero_btn a:hover span:last-child,
-.bottom_button button:hover span:last-child {
+.bottom_button button:hover span:last-child ,.product_option_area > a:hover span:last-child{
   transform: translate(0px, 0);
   visibility: visible;
   opacity: 1;
@@ -3046,7 +3046,7 @@ section.hero_section {
 }
 
 .hero_left>.hero_btn a:hover span:first-child,
-.bottom_button button:hover span:first-child {
+.bottom_button button:hover span:first-child ,.product_option_area > a:hover span:first-child{
   transform: translate(30px, 0);
   visibility: hidden;
   opacity: 0;
@@ -3054,11 +3054,11 @@ section.hero_section {
 }
 
 .hero_left>.hero_btn>a span:first-child,
-.bottom_button button span:first-child {
+.bottom_button button span:first-child ,.product_option_area > a span:first-child{
   transition: .6s;
 }
 
-.hero_left>.hero_btn>a,
+.hero_left>.hero_btn>a,.product_option_area > a,
 .bottom_button button {
   padding: 14px 40px;
   border-radius: 50px;

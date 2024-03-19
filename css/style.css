@@ -2338,6 +2338,8 @@ button.mobile_menu_btn:hover {
   padding: 0px 10px;
   position: relative;
   transition: .6s;
+  align-items: center;
+  border-radius: 0;
 }
 
 .viewd_product .viewed_product_wrapper .viewed_single_product .vs_product_info .add_cart button svg {
@@ -3047,7 +3049,7 @@ section.hero_section {
 }
 
 .hero_left>.hero_btn span:last-child,
-.bottom_button button span:last-child ,.product_option_area > a span:last-child {
+.bottom_button button span:last-child ,.product_option_area > a span:last-child,.add_cart button span:last-child {
   position: absolute;
   transform: translate(-30px, 0%);
   visibility: hidden;
@@ -3057,7 +3059,7 @@ section.hero_section {
 }
 
 .hero_left>.hero_btn a:hover span:last-child,
-.bottom_button button:hover span:last-child ,.product_option_area > a:hover span:last-child{
+.bottom_button button:hover span:last-child ,.product_option_area > a:hover span:last-child,.add_cart button:hover span:last-child{
   transform: translate(0px, 0);
   visibility: visible;
   opacity: 1;
@@ -3065,7 +3067,7 @@ section.hero_section {
 }
 
 .hero_left>.hero_btn a:hover span:first-child,
-.bottom_button button:hover span:first-child ,.product_option_area > a:hover span:first-child{
+.bottom_button button:hover span:first-child ,.product_option_area > a:hover span:first-child,.add_cart button:hover span:first-child{
   transform: translate(30px, 0);
   visibility: hidden;
   opacity: 0;
@@ -3073,12 +3075,12 @@ section.hero_section {
 }
 
 .hero_left>.hero_btn>a span:first-child,
-.bottom_button button span:first-child ,.product_option_area > a span:first-child{
+.bottom_button button span:first-child ,.product_option_area > a span:first-child,.add_cart button span:first-child{
   transition: .6s;
 }
 
 .hero_left>.hero_btn>a,.product_option_area > a,
-.bottom_button button {
+.bottom_button button,.add_cart button {
   padding: 14px 40px;
   border-radius: 50px;
   text-decoration: none;

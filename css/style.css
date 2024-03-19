@@ -4766,7 +4766,9 @@ body.dark-them :where(.swiper-button-next15, .swiper-button-prev15) {
 .mySwiper16 {
   width: 100%;
 }
-
+.mySwiper16 .swiper-slide:nth-child(even) .single_blog {
+  transform: translate(0px, -50px);
+}
 .blog_section_title>h2 {
   font-size: 30px;
   color: var(--sub-text-color);

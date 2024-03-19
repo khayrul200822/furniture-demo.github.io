@@ -1,9 +1,14 @@
-
-//preloader handler
 const preloader_area = document.querySelector(".preloader");
-const product_popup = document.querySelector(".top_pick_popup");
-const product_popup_wrapper = document.querySelector(".top_pick_wrapper");
-const product_popup_close = document.querySelector(".popup_close");
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        preloader_area.style.visibility = "hidden"
+        preloader_area.style.opacity = "0"
+    }, 2000);
+
+
+})
+
 
 const user_popup_close = document.querySelector(".user_popu_close");
 const user_popup_open = document.querySelector(".user_btn");
@@ -38,42 +43,6 @@ user_popup_close.addEventListener("click", () => {
 })
 
 
-const side_category_close = document.querySelector(".side_category_close button")
-const side_category_popup = document.querySelector(".side_category")
-const side_category_wrapper = document.querySelector(".side_category_wrapper")
-const side_category_open = document.querySelector(".category_container button")
-
-side_category_open.addEventListener("click", () => {
-    side_category_wrapper.style.animation = "slide_right 1s ease-in forwards"
-    side_category_popup.style.animation = "slide_right2 1s ease-in forwards"
-})
-
-side_category_close.addEventListener("click", () => {
-    side_category_wrapper.style.animation = "slide_left 1s ease-in  forwards"
-    side_category_popup.style.animation = "slide_out 1s ease-in  forwards"
-
-})
-
-//mobile side category
-const sm_side_category_close = document.querySelector(".sm_side_category_close button")
-const sm_side_category_popup = document.querySelector(".side_category_sm")
-const sm_side_category_wrapper = document.querySelector(".side_category_wrapper_sm")
-const sm_side_category_open = document.querySelector(".category_container button")
-
-sm_side_category_open.addEventListener("click", () => {
-    sm_side_category_wrapper.style.animation = "slide_right 1s ease-in forwards"
-    sm_side_category_popup.style.animation = "slide_right2 1s ease-in forwards"
-})
-
-sm_side_category_close.addEventListener("click", () => {
-    sm_side_category_wrapper.style.animation = "slide_left 1s ease-in  forwards"
-    sm_side_category_popup.style.animation = "slide_out 1s ease-in  forwards"
-
-})
-
-
-
-
 const mobile_menu_close = document.querySelector(".menu_close")
 const mobile_menu_popup = document.querySelector(".mobile_menu_popup")
 const mobile_menu_wrapper = document.querySelector(".mobile_menu")
@@ -94,45 +63,7 @@ $(".scroll_close").on("click", () => {
     $(".screen_offer").fadeOut(500);
 })
 
-//section toggle hanlder
-$(".section_close").on("click", () => {
-    $(".popular_category").fadeOut();
-})
 
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        preloader_area.style.visibility = "hidden"
-        preloader_area.style.opacity = "0"
-    }, 2000);
-
-    product_popup_wrapper.style.animation = "slide_right 1s ease-in 5s forwards"
-    product_popup.style.animation = "slide_right2 1s ease-in 5s forwards"
-
-    product_popup_close.addEventListener("click", () => {
-        product_popup_wrapper.style.animation = "slide_right3 1s ease-in  forwards"
-        product_popup.style.animation = "slide_out 1s ease-in  forwards"
-
-    })
-
-})
-
-const variation_close_btn = document.querySelector(".variation_close");
-const variation_open_btn = document.querySelectorAll(".varient_selection button");
-const variation_area = document.querySelector(".variation_popup")
-const variation_wrapper = document.querySelector(".variation_wrapper")
-
-
-variation_open_btn.forEach(btn => {
-    btn.addEventListener("click", () => {
-        variation_wrapper.style.animation = "slide_right 1s ease-in forwards"
-      variation_area.style.animation = "slide_right2 1s ease-in forwards"
-    })
-  })
-  variation_close_btn.addEventListener("click", () => {
-    variation_wrapper.style.animation = "slide_right3 1s ease-in forwards"
-    variation_area.style.animation = "slide_out 1s ease-in forwards"
-  
-  })
 
 
 //quick view popup
@@ -342,7 +273,7 @@ s_div.each(function () {
 });
 
 $(".category_name").on("click", function () {
-    $(".category_dropdown").fadeToggle()
+    $(".category_dropdown").fadeIn()
 
 })
 
@@ -357,6 +288,8 @@ $(".category_dropdown li").each((index, item) => {
 const dropdown_item = document.querySelectorAll(".item_dropdown li")
 
 dropdown_item.forEach(item => {
+
+
     item.addEventListener("click", () => {
 
         let dropdown_value = item.parentElement.previousElementSibling.querySelector(".selected_item")
@@ -396,23 +329,8 @@ banner_close_button.addEventListener("click", () => {
     banner_area.style.animation = "hide .2s ease-in .2s alternate forwards"
 })
 
-//hero section toggle handle
-const side_bar_btn = document.querySelector(".category_container button")
-const side_bar_btn_close = document.querySelector(".side_category_close button")
-const hero_section = document.querySelector(".hero_section")
 
-side_bar_btn.addEventListener("click", () => {
-    hero_section.classList.add("open_category_bar")
-    hero_section.classList.remove("close_category_bar")
-})
-side_bar_btn_close.addEventListener("click", () => {
-    hero_section.classList.add("close_category_bar")
-    hero_section.classList.remove("open_category_bar")
-})
-sm_side_category_close.addEventListener("click", () => {
-    hero_section.classList.add("close_category_bar")
-    hero_section.classList.remove("open_category_bar")
-})
+
 
 //toggle button handler
 const toggle_button = document.querySelector(".toggle_icon");
@@ -452,7 +370,22 @@ window.addEventListener("scroll", () => {
     }
 });
 
-//variation popup handler
+//side category 
+const side_category_close = document.querySelector(".side_category_close button")
+const side_category_popup = document.querySelector(".side_category")
+const side_category_wrapper = document.querySelector(".side_category_wrapper")
+const side_category_open = document.querySelector(".category_container button")
+
+side_category_open.addEventListener("click", () => {
+    side_category_wrapper.style.animation = "slide_right 1s ease-in forwards"
+    side_category_popup.style.animation = "slide_right2 1s ease-in forwards"
+})
+
+side_category_close.addEventListener("click", () => {
+    side_category_wrapper.style.animation = "slide_left 1s ease-in  forwards"
+    side_category_popup.style.animation = "slide_out 1s ease-in  forwards"
+
+})
 
 
 
@@ -466,22 +399,7 @@ let isDark = true;
 //*** Dark mode & Light Mode***/
 //Dark mode and Light mode handler
 $(document).ready(function() {
-    const title_color = $(".popup_title > h2");
-    const title_color2 = $(".popup_close");
-    const title_color3 = $(".category_slider_header h2");
-    const news_sec = $(".newsletter_section");
-    const title_colorB = $(".section_slider .single_product");
-    const top_header_border = $(".top_header");
-    const main_header_border = $(".main_header");
-    const hero_left_title = $(".hero_left > h2");
-    const hero_left_link = $(".hero_left > a");
-    const hero_left_para = $(".hero_left > p");
-    const category_section_bg = $(".larg_category_section");
-    const scroll_div = $(".category_slider .scroll div");
-    const title_color5 = $(".newsletter_wrapper h3");
-    const title_color4 = $(".section_close");
     const mode_button = $(".mode_btn");
-    const top_header= $(".top_header_wrapper .right");
     let isDark = true;
 
     mode_button.on("click", function() {
@@ -495,54 +413,6 @@ $(document).ready(function() {
         isDark = !isDark;
     });
 });
-
-
-//variation element
-const brand_names = ['IKEA', 'COROM', 'FENDI', 'SLACK'];
-const brand_select = document.querySelectorAll(".brand_container > li");
-const brand_select_name = document.querySelector(".brand_name");
-
-brand_select.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        // Remove "selected_brand" class from all list items
-        brand_select.forEach(item => {
-            item.classList.remove("selected_brand");
-        });
-        // Add "selected_brand" class to the clicked list item
-        btn.classList.add("selected_brand");
-
-        // Display the brand name corresponding to the clicked list item
-        brand_select_name.textContent = brand_names[index];
-    });
-});
-
-const color_names = ['Pink', 'Dark Pink', 'Violet', 'Gray'];
-const color_select = document.querySelectorAll(".color_container > li");
-const color_select_name = document.querySelector(".color_name");
-
-color_select.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        // Remove "selected_brand" class from all list items
-        color_select.forEach(item => {
-            item.classList.remove("selected_color");
-        });
-        // Add "selected_brand" class to the clicked list item
-        btn.classList.add("selected_color");
-
-        // Display the brand name corresponding to the clicked list item
-        color_select_name.textContent = color_names[index];
-    });
-});
-
-
-//slider anvigation hanlder
-const slider_nav_close = document.querySelector(".hero_navs_close");
-const slider_nav = document.querySelector(".hero_navs")
-
-slider_nav_close.addEventListener("click", () => {
-    slider_nav.style.visibility = "hidden"
-    slider_nav.style.opacity = "0"
-})
 
 
 var swiper = new Swiper(".mySwiper", {
@@ -585,6 +455,7 @@ var swiper2 = new Swiper(".mySwiper2", {
     }
 });
 
+
 var swiper3 = new Swiper(".mySwiper3", {
     loop: true,
     slidesPerView: 1,
@@ -609,6 +480,7 @@ var swiper3 = new Swiper(".mySwiper3", {
     }
 });
 
+
 var swiper4 = new Swiper(".mySwiper4", {
     loop: true,
     slidesPerView: 1,
@@ -628,273 +500,3 @@ var swiper4 = new Swiper(".mySwiper4", {
         }
     }
 });
-
-var swiper5 = new Swiper(".mySwiper5", {
-    loop: true,
-    autoplay: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-        el: ".swiper-pagination5",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next5",
-        prevEl: ".swiper-button-prev5",
-    },
-});
-
-var swiper6 = new Swiper(".mySwiper6", {
-    loop: true,
-    autoplay: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next6",
-        prevEl: ".swiper-button-prev6",
-    },
-});
-var swiper7 = new Swiper(".mySwiper7", {
-    autoplay: {
-        delay: 1000,
-    },
-    loop: true,
-    autoplay: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next7",
-        prevEl: ".swiper-button-prev7",
-    },
-});
-
-var swiper8 = new Swiper(".mySwiper8", {
-    autoplay: {
-        delay: 1000,
-    },
-    loop: true,
-    autoplay: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next8",
-        prevEl: ".swiper-button-prev8",
-    },
-});
-
-var swiper9 = new Swiper(".mySwiper9", {
-    autoplay: {
-        delay: 1000,
-    },
-    loop: true,
-    autoplay: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next9",
-        prevEl: ".swiper-button-prev9",
-    },
-});
-
-var swiper10 = new Swiper(".mySwiper10", {
-    autoplay: {
-        delay: 1000,
-    },
-    loop: true,
-    autoplay: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next10",
-        prevEl: ".swiper-button-prev10",
-    },
-});
-
-var swiper11 = new Swiper(".mySwiper11", {
-    autoplay: {
-        delay: 1000,
-    },
-    loop: true,
-    autoplay: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next11",
-        prevEl: ".swiper-button-prev11",
-    },
-});
-
-var swiper12 = new Swiper(".mySwiper12", {
-    autoplay: true,
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next12",
-        prevEl: ".swiper-button-prev12",
-    },
-    pagination: {
-        el: ".swiper-pagination12",
-        clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-        },
-        767: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 15,
-        },
-        1400: {
-            slidesPerView: 5,
-            spaceBetween: 15,
-        }
-    }
-});
-var swiper13 = new Swiper(".mySwiper13", {
-    autoplay: true,
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next13",
-        prevEl: ".swiper-button-prev13",
-    },
-    pagination: {
-        el: ".swiper-pagination13",
-        clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-        },
-        767: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 15,
-        },
-        1400: {
-            slidesPerView: 5,
-            spaceBetween: 15,
-        }
-    }
-});
-
-
-var swiper = new Swiper(".mySwiper14", {
-    spaceBetween: 10,
-    slidesPerView: 1,
-    freeMode: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-        },
-        991: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-        1400: {
-            slidesPerView: 4,
-            spaceBetween: 15,
-        }
-    }
-  });
-  var swiper15 = new Swiper(".mySwiper15", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next15",
-      prevEl: ".swiper-button-prev15",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
-
-  var swiper13 = new Swiper(".mySwiper16", {
-    autoplay: true,
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next16",
-        prevEl: ".swiper-button-prev16",
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-
-    }
-});
-
-
-var swiper = new Swiper(".mySwiper18", {
-    spaceBetween: 10,
-    slidesPerView: 1,
-    freeMode: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-        480:{
-            slidesPerView: 2,
-            spaceBetween: 15,
-        },
-        576: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-        991: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-        1400: {
-            slidesPerView: 4,
-            spaceBetween: 15,
-        }
-    }
-  });
-  var swiper17 = new Swiper(".mySwiper17", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next17",
-      prevEl: ".swiper-button-prev17",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
-
-
-let isclicked = true;
-const slider_btn = document.querySelectorAll(".hero_navs_pused");
-slider_btn.forEach(btn => {
-    btn.addEventListener("click", () => {
-
-        if (isclicked) {
-            btn.innerHTML = `<i class="fa-solid fa-play"></i>`
-            swiper12.autoplay.stop();
-            swiper13.autoplay.stop();
-        } else {
-            btn.innerHTML = `<i class="fa-solid fa-pause"></i>`
-            swiper12.autoplay.start();
-            swiper13.autoplay.start();
-        };
-        isclicked = !isclicked
-    })
-    //
-})

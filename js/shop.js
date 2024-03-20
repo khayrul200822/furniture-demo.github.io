@@ -500,3 +500,33 @@ var swiper4 = new Swiper(".mySwiper4", {
         }
     }
 });
+
+
+var swiper5 = new Swiper(".mySwiper5", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next5",
+        prevEl: ".swiper-button-prev5",
+    },
+    pagination: {
+        el: ".swiper-pagination5",
+        clickable: true,
+    },
+    effect: 'fade'
+
+});
+
+var swiper6 = new Swiper(".mySwiper6", {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next6",
+        prevEl: ".swiper-button-prev6",
+    },
+    effect: "flip"
+
+});

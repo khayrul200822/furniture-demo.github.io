@@ -273,7 +273,7 @@ s_div.each(function () {
 });
 
 $(".category_name").on("click", function () {
-    $(".category_dropdown").fadeIn()
+    $(".category_dropdown").fadeToggle()
 
 })
 

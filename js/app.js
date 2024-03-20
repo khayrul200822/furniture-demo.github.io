@@ -340,11 +340,9 @@ s_div.each(function () {
     });
 
 });
-
 $(".category_name").on("click", function () {
-    $(".category_dropdown").fadeToggle()
-
-})
+    $(".category_dropdown").fadeToggle();
+});
 
 $(".category_dropdown li").each((index, item) => {
     $(item).on("click", () => {

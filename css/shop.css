@@ -355,7 +355,7 @@ ul.category_dropdown li {
   font-size: 14px;
   transition: .6s;
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 ul.category_dropdown li:hover {
@@ -374,7 +374,7 @@ ul.category_dropdown li:hover {
   border-radius: 50px;
   border: 1px solid var(--sub-color);
   position: relative;
-  overflow: hidden;
+
 }
 
 .main_header .main-header_wrapper .desktop_searchbar .search_suggestion {
@@ -762,12 +762,14 @@ ul.category_dropdown li:hover {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 0;
+  color: var(--sub-text-color);
 }
 
 .side_cart .side_cart_wrapper .cart_header>span {
   font-size: 20px;
   transition: .6s;
   cursor: pointer;
+  color: var(--sub-text-color);
 }
 
 .side_cart .side_cart_wrapper .cart_header>span:hover svg {
@@ -1073,11 +1075,12 @@ ul.category_dropdown li:hover {
   font-weight: 500;
   transition: .6s;
   background: var(--secondary-color);
+  color: var(--sub-text-color);
 }
 
 .popup_div .note_form>.form_btns button:first-child {
   background: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .popup_div .note_form>.form_btns button:first-child:hover {
@@ -1108,7 +1111,7 @@ ul.category_dropdown li:hover {
 .mini_popup_bg4 {
   width: 100%;
   height: 100%;
-  background: #00000070;
+  background: #ffffff7d;
   position: absolute;
 }
 
@@ -1122,9 +1125,13 @@ ul.category_dropdown li:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--bg-color);
 }
-
+.gift_wrap,.rate_mini_popup .rate_wrapper,.popup_div,.discount_wrapper{
+  background: var(--sub-color);
+}
+body.dark-them :where(.gift_wrap,.rate_wrapper ,.popup_div,.discount_wrapper){
+  background: var(--bg-color) !important;
+}
 .gift_wrap>span {
   color: var(--primary-color);
 }
@@ -1154,7 +1161,7 @@ ul.category_dropdown li:hover {
 .gift_wrap button:not(:last-child) {
   margin-bottom: 10px;
   background: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--text-color);
   border: 1px solid transparent;
 }
 
@@ -1194,7 +1201,6 @@ ul.category_dropdown li:hover {
   z-index: 9;
   width: 350px;
   padding: 15px;
-  background: var(--bg-color);
   bottom: 0;
 }
 
@@ -1219,7 +1225,7 @@ ul.category_dropdown li:hover {
 .single_input input,
 #cupon_form input {
   width: 100%;
-  padding: 10px 15px;
+  padding: 13px 15px;
   border-radius: 50px;
   border: 1px solid transparent;
   outline: none;
@@ -1230,6 +1236,7 @@ ul.category_dropdown li:hover {
 
 .rate_mini_popup .rate_wrapper form.shiping_form .single_input label {
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .rate_mini_popup .rate_wrapper form.shiping_form button,
@@ -1243,7 +1250,7 @@ form#cupon_form button {
   font-size: 14px;
   font-weight: 500;
   transition: .6s;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 .rate_mini_popup .rate_wrapper form.shiping_form button:hover,
@@ -1256,7 +1263,7 @@ form#cupon_form button:hover {
 .rate_mini_popup .rate_wrapper form.shiping_form button:not(:last-child),
 form#cupon_form button:not(:last-child) {
   background: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--text-color);
   transition: .6s;
 }
 
@@ -1279,7 +1286,6 @@ form#cupon_form button:not(:last-child):hover {
 .discount_mini_popup .discount_wrapper {
   position: absolute;
   padding: 15px;
-  background: var(--bg-color);
   bottom: 0;
   width: 350px;
 }
@@ -1303,7 +1309,7 @@ form#cupon_form button:not(:last-child):hover {
 
 .discount_mini_popup .discount_wrapper>p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .discount_mini_popup .discount_wrapper form#cupon_form input {

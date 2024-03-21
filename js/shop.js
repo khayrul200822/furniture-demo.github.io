@@ -70,13 +70,13 @@ $(".scroll_close").on("click", () => {
 const quick_view_area = document.querySelector(".quick_view_popup")
 const quick_view_btn = document.querySelector(".close_quick_view")
 
-const quick_view_wrapper= document.querySelector(".quick_view_wrapper")
+const quick_view_wrapper = document.querySelector(".quick_view_wrapper")
 const quick_view_open = document.querySelectorAll(".quick_view");
 quick_view_open.forEach(btn => {
-  btn.addEventListener("click", () => {
-    quick_view_wrapper.style.animation = "slide_right 1s ease-in forwards"
-    quick_view_area.style.animation = "slide_right2 1s ease-in forwards"
-  })
+    btn.addEventListener("click", () => {
+        quick_view_wrapper.style.animation = "slide_right 1s ease-in forwards"
+        quick_view_area.style.animation = "slide_right2 1s ease-in forwards"
+    })
 })
 quick_view_btn.addEventListener("click", () => {
     quick_view_wrapper.style.animation = "slide_right3 1s ease-in forwards"
@@ -89,15 +89,15 @@ quick_view_btn.addEventListener("click", () => {
 //video popup hanlder 
 const video_close_btn = document.querySelector(".video_popup_close");
 const video_open_btn = document.querySelectorAll(".video_btn");
-const video_popup_area= document.querySelector(".product_video_popup");
+const video_popup_area = document.querySelector(".product_video_popup");
 const video_wrapper = document.querySelector(".video_popup_wrapper");
 
 video_open_btn.forEach(btn => {
     btn.addEventListener("click", () => {
-    video_wrapper.style.animation = "slide_right 1s ease-in forwards"
-    video_popup_area.style.animation = "slide_right2 1s ease-in forwards"
+        video_wrapper.style.animation = "slide_right 1s ease-in forwards"
+        video_popup_area.style.animation = "slide_right2 1s ease-in forwards"
+    })
 })
-})  
 video_close_btn.addEventListener("click", () => {
     video_wrapper.style.animation = "slide_right3 1s ease-in  forwards"
     video_popup_area.style.animation = "slide_out 1s ease-in  forwards"
@@ -386,23 +386,91 @@ side_category_close.addEventListener("click", () => {
     side_category_popup.style.animation = "slide_out 1s ease-in  forwards"
 
 })
+//aside accrodian handleing
+
+const accordionBtns = document.querySelectorAll(".accordion");
+
+accordionBtns.forEach((accordion) => {
+
+    accordion.onclick = function (e) {
+        if (!e.target.className.includes("swiper-button-next") && !e.target.className.includes("swiper-button-prev")) {
+            this.classList.toggle("is-open");
+
+            let content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                //this is if the accordion is open
+                content.style.maxHeight = null;
+            } else {
+                //if the accordion is currently closed
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+
+        }
+    }
+        let content = accordion.nextElementSibling;
+        content.style.maxHeight = content.scrollHeight + "px";
+        accordion.classList.add("is-open");
+    
+});
+
+
+//script for price range making
+const price_ranges = document.querySelectorAll(".range_div input");
+const progress_bar = document.querySelector(".price_progress");
+const price_inputs = document.querySelectorAll(".field input");
+let price_gap = 100;
+
+price_inputs.forEach(input => {
+    input.addEventListener("input", (e) => {
+        let minValue = parseInt(price_inputs[0].value);
+        let maxValue = parseInt(price_inputs[1].value)
+        if (maxValue - minValue >= price_gap && maxValue <= 1000) {
+            if (e.target.className === "minNumber") {
+                price_ranges[0].value = minValue;
+                progress_bar.style.left = (minValue / price_ranges[0].max) * 100 + "%";
+            } else {
+                price_ranges[1].value = maxValue;
+                progress_bar.style.right = 100 - (maxValue / price_ranges[1].max) * 100
+            }
+        }
+    })
+})
+
+price_ranges.forEach(input => {
+    input.addEventListener("input", (e) => {
+        let minValue = parseInt(price_ranges[0].value);
+        let maxValue = parseInt(price_ranges[1].value)
+        if (maxValue - minValue < price_gap) {
+            if (e.target.className === "min_price_range") {
+                price_ranges[0].value = maxValue - price_gap
+            } else {
+                price_ranges[1].value = minValue + price_gap
+            }
+        } else {
+            price_inputs[0].value = minValue;
+            price_inputs[1].value = maxValue;
+            progress_bar.style.left = (minValue / price_ranges[0].max) * 100 + "%";
+            progress_bar.style.right = 100 - (maxValue / price_ranges[1].max) * 100 + "%"
+        }
+    })
+})
 
 
 
 //dragable content
-$( function() {
-    $( ".toggle_menu" ).draggable();
-  } );
+$(function () {
+    $(".toggle_menu").draggable();
+});
 
 let isDark = true;
 
 //*** Dark mode & Light Mode***/
 //Dark mode and Light mode handler
-$(document).ready(function() {
+$(document).ready(function () {
     const mode_button = $(".mode_btn");
     let isDark = true;
 
-    mode_button.on("click", function() {
+    mode_button.on("click", function () {
         if (isDark) {
             mode_button.html(`<i class="fa-regular fa-sun"></i>`);
             $("body").addClass("dark-them");
@@ -528,5 +596,17 @@ var swiper6 = new Swiper(".mySwiper6", {
         prevEl: ".swiper-button-prev6",
     },
     effect: "flip"
+
+});
+
+var swiper6 = new Swiper(".mySwiper12", {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next12",
+        prevEl: ".swiper-button-prev12",
+    },
 
 });

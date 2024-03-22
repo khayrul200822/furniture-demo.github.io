@@ -357,15 +357,15 @@ const product_container = document.querySelector(".shop_container");
 const sideBar_show = document.querySelector(".sidebar_show");
 
 sideBar_close.addEventListener("click", () => {
-  side_bar.style.display = "none";
-  product_container.style.width = "100%";
-  sideBar_show.style.display = "flex";
+    side_bar.style.display = "none";
+    product_container.style.width = "100%";
+    sideBar_show.style.display = "flex";
 
 })
 sideBar_show.addEventListener("click", () => {
-  side_bar.style.display = "block";
-  product_container.style.width = "calc(100% - 300px)";
-  sideBar_show.style.display = "none"
+    side_bar.style.display = "block";
+    product_container.style.width = "calc(100% - 300px)";
+    sideBar_show.style.display = "none"
 })
 
 
@@ -377,16 +377,16 @@ const dropdown_btn2 = document.querySelector(".short_by_btn")
 
 let isclicked = true;
 const dropdown_handler = (dropdown_area, dropdown_button) => {
-  dropdown_button.addEventListener("click", () => {
-    if (isclicked) {
-      dropdown_area.style.animation = "list_anim 1s linear forwards alternate";
-      dropdown_area.style.display = "block"
-    } else {
-      dropdown_area.style.animation = "list_anim_close 1s linear forwards alternate";
-      dropdown_area.style.display = "none"
-    }
-    isclicked = !isclicked;
-  })
+    dropdown_button.addEventListener("click", () => {
+        if (isclicked) {
+            dropdown_area.style.animation = "list_anim 1s linear forwards alternate";
+            dropdown_area.style.display = "block"
+        } else {
+            dropdown_area.style.animation = "list_anim_close 1s linear forwards alternate";
+            dropdown_area.style.display = "none"
+        }
+        isclicked = !isclicked;
+    })
 
 }
 dropdown_handler(dropdown, dropdown_btn)
@@ -400,27 +400,38 @@ const item_value = document.querySelectorAll(".pageShow_item_popup ul li")
 const sort_value = document.querySelectorAll(".short_list ul li")
 const sort_value_field = document.querySelector(".sort_item")
 const value_handler = (select_items, selcet_value) => {
-  select_items.forEach(item => {
-    item.addEventListener("click", () => {
+    select_items.forEach(item => {
+        item.addEventListener("click", () => {
 
- 
-      // item_value_field.textContent = item.textContent;
-      // item.innerHTML = `<i class="fa-solid fa-check"></i> ${item.textContent}`
-      select_items.forEach(otherItem => {
-        otherItem.innerHTML = otherItem.textContent;
-      });
-      // Add icon to the clicked item
-      item.innerHTML = `<i class="fa-solid fa-check"></i> ${item.textContent}`;
 
-      // Update the item_value_field content
-      selcet_value.textContent = item.textContent;
+            // item_value_field.textContent = item.textContent;
+            // item.innerHTML = `<i class="fa-solid fa-check"></i> ${item.textContent}`
+            select_items.forEach(otherItem => {
+                otherItem.innerHTML = otherItem.textContent;
+            });
+            // Add icon to the clicked item
+            item.innerHTML = `<i class="fa-solid fa-check"></i> ${item.textContent}`;
+
+            // Update the item_value_field content
+            selcet_value.textContent = item.textContent;
+        })
+
     })
-
-  })
 }
 value_handler(item_value, item_value_field)
 value_handler(sort_value, sort_value_field)
 
+
+//pagination script
+
+//script for pagination
+const current_page_no = document.querySelector(".page_no");
+$('.pagination').pajinatify({
+    dir: 'rtl',
+    onChange: function (currentPage) {
+        current_page_no.textContent = currentPage;
+    },
+});
 
 
 
@@ -484,10 +495,10 @@ accordionBtns.forEach((accordion) => {
 
         }
     }
-        let content = accordion.nextElementSibling;
-        content.style.maxHeight = content.scrollHeight + "px";
-        accordion.classList.add("is-open");
-    
+    let content = accordion.nextElementSibling;
+    content.style.maxHeight = content.scrollHeight + "px";
+    accordion.classList.add("is-open");
+
 });
 
 
@@ -531,6 +542,67 @@ price_ranges.forEach(input => {
         }
     })
 })
+
+
+//product view handler
+const grid_per3 = document.querySelector(".grid3_view")
+const grid_per2 = document.querySelector(".grid2_view")
+const grid_per4 = document.querySelector(".grid4_view")
+const list_view = document.querySelector(".list_view")
+const products = document.querySelectorAll(".single_shop_product")
+const product_imgs = document.querySelectorAll(".shop_product_img")
+const product_container_box = document.querySelector(".product_container")
+const product_infos = document.querySelectorAll(".shop_product_info")
+
+grid_per4.addEventListener('click', () => {
+    product_container_box.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
+    products.forEach(p => {
+        p.style.display = "block";
+    })
+    product_imgs.forEach(img => {
+        img.style.width = "100%"
+    })
+    product_infos.forEach(info => {
+        info.style.width = "100%"
+    })
+})
+grid_per3.addEventListener('click', () => {
+    product_container_box.style.gridTemplateColumns = "1fr 1fr 1fr";
+    products.forEach(p => {
+        p.style.display = "block";
+    })
+    product_imgs.forEach(img => {
+        img.style.width = "100%"
+    })
+    product_infos.forEach(info => {
+        info.style.width = "100%"
+    })
+})
+grid_per2.addEventListener('click', () => {
+    product_container_box.style.gridTemplateColumns = "1fr 1fr";
+    products.forEach(p => {
+        p.style.display = "block";
+    })
+    product_imgs.forEach(img => {
+        img.style.width = "100%"
+    })
+    product_infos.forEach(info => {
+        info.style.width = "100%"
+    })
+})
+list_view.addEventListener('click', () => {
+    product_container_box.style.gridTemplateColumns = "1fr 1fr";
+    products.forEach(p => {
+        p.style.display = "flex";
+    })
+    product_imgs.forEach(img => {
+        img.style.width = "40%"
+    })
+    product_infos.forEach(info => {
+        info.style.width = "60%"
+    })
+})
+
 
 
 

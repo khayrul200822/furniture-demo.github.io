@@ -9,6 +9,7 @@
     <!--style-->
     <link rel="stylesheet" href="css/shop.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/jquery.pajinatify.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -4420,7 +4421,7 @@
                                     <span>Filter</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </span>
-                                <p class="mb-0">Showing <span class="show_item">18</span> of <span
+                                <p class="mb-0">Showing <span class="show_item">12</span> of <span
                                         class="total_item">36</span> result</p>
                                 <div class="product_view d-flex ">
                                     <div class="single_view list_view">
@@ -4434,9 +4435,6 @@
                                     </div>
                                     <div class="single_view grid4_view d-none d-lg-grid ">
                                         <i class="fa-solid fa-grip"></i>
-                                    </div>
-                                    <div class="single_view grid5_view d-none d-xl-grid ">
-                                        <i class="fa-solid fa-border-none"></i>
                                     </div>
                                 </div>
                             </div>
@@ -4486,6 +4484,7 @@
                             <div class="single_shop_product">
                                 <div class="shop_product_img">
                                     <img class="img-fluid" src="img/product-20.png" alt="shop product image">
+                                    <span class="sp_status off_">Hot</span>
                                     <span class="love_react">
                                         <i class="fa-regular fa-heart"></i>
                                     </span>
@@ -4499,7 +4498,14 @@
                                             </li>
                                             <li class="list-unstyled">
                                                 <i class="fa-solid fa-cart-shopping"></i>
-                                                
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number1" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -4507,6 +4513,12 @@
                                 <div class="shop_product_info">
                                     <b>$140</b>
                                     <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
                                     <div class="rating_sp d-flex align-items-center gap-3">
                                         <div class="star d-flex align-items-center gap-1">
                                             <i class="fa-solid fa-star"></i>
@@ -4540,7 +4552,14 @@
                                             </li>
                                             <li class="list-unstyled">
                                                 <i class="fa-solid fa-cart-shopping"></i>
-                                                
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number2" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -4548,6 +4567,12 @@
                                 <div class="shop_product_info">
                                     <b>$140</b>
                                     <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
                                     <div class="rating_sp d-flex align-items-center gap-3">
                                         <div class="star d-flex align-items-center gap-1">
                                             <i class="fa-solid fa-star"></i>
@@ -4569,6 +4594,7 @@
                             <div class="single_shop_product">
                                 <div class="shop_product_img">
                                     <img class="img-fluid" src="img/product-09.png" alt="shop product image">
+                                    <span class="sp_status">New</span>
                                     <span class="love_react">
                                         <i class="fa-regular fa-heart"></i>
                                     </span>
@@ -4582,7 +4608,14 @@
                                             </li>
                                             <li class="list-unstyled">
                                                 <i class="fa-solid fa-cart-shopping"></i>
-                                                
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number3" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -4590,6 +4623,12 @@
                                 <div class="shop_product_info">
                                     <b>$140</b>
                                     <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
                                     <div class="rating_sp d-flex align-items-center gap-3">
                                         <div class="star d-flex align-items-center gap-1">
                                             <i class="fa-solid fa-star"></i>
@@ -4611,6 +4650,7 @@
                             <div class="single_shop_product">
                                 <div class="shop_product_img">
                                     <img class="img-fluid" src="img/product-11.png" alt="shop product image">
+                                    <span class="sp_status off_">-15%</span>
                                     <span class="love_react">
                                         <i class="fa-regular fa-heart"></i>
                                     </span>
@@ -4624,7 +4664,14 @@
                                             </li>
                                             <li class="list-unstyled">
                                                 <i class="fa-solid fa-cart-shopping"></i>
-                                                
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number4" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -4632,6 +4679,12 @@
                                 <div class="shop_product_info">
                                     <b>$140</b>
                                     <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
                                     <div class="rating_sp d-flex align-items-center gap-3">
                                         <div class="star d-flex align-items-center gap-1">
                                             <i class="fa-solid fa-star"></i>
@@ -4666,7 +4719,14 @@
                                             </li>
                                             <li class="list-unstyled">
                                                 <i class="fa-solid fa-cart-shopping"></i>
-                                                
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number5" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -4674,6 +4734,12 @@
                                 <div class="shop_product_info">
                                     <b>$140</b>
                                     <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
                                     <div class="rating_sp d-flex align-items-center gap-3">
                                         <div class="star d-flex align-items-center gap-1">
                                             <i class="fa-solid fa-star"></i>
@@ -4708,7 +4774,14 @@
                                             </li>
                                             <li class="list-unstyled">
                                                 <i class="fa-solid fa-cart-shopping"></i>
-                                                
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number6" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -4716,6 +4789,12 @@
                                 <div class="shop_product_info">
                                     <b>$140</b>
                                     <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
                                     <div class="rating_sp d-flex align-items-center gap-3">
                                         <div class="star d-flex align-items-center gap-1">
                                             <i class="fa-solid fa-star"></i>
@@ -4732,11 +4811,11 @@
                                         <a href="#">Furniture</a>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="single_shop_product">
                                 <div class="shop_product_img">
-                                    <img class="img-fluid" src="img/product-08.png" alt="shop product image">
+                                    <img class="img-fluid" src="img/product-24.png" alt="shop product image">
+                                    <span class="sp_status off_">-50%</span>
                                     <span class="love_react">
                                         <i class="fa-regular fa-heart"></i>
                                     </span>
@@ -4750,7 +4829,14 @@
                                             </li>
                                             <li class="list-unstyled">
                                                 <i class="fa-solid fa-cart-shopping"></i>
-                                                
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number7" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -4758,6 +4844,12 @@
                                 <div class="shop_product_info">
                                     <b>$140</b>
                                     <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
                                     <div class="rating_sp d-flex align-items-center gap-3">
                                         <div class="star d-flex align-items-center gap-1">
                                             <i class="fa-solid fa-star"></i>
@@ -4774,8 +4866,283 @@
                                         <a href="#">Furniture</a>
                                     </div>
                                 </div>
-
                             </div>
+                            <div class="single_shop_product">
+                                <div class="shop_product_img">
+                                    <img class="img-fluid" src="img/product-23.png" alt="shop product image">
+                                    <span class="love_react">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <div class="sp_option d-flex align-items-center justify-content-center ">
+                                        <ul class=" p-0 mb-0 d-flex">
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number8" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shop_product_info">
+                                    <b>$140</b>
+                                    <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rating_sp d-flex align-items-center gap-3">
+                                        <div class="star d-flex align-items-center gap-1">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="review_count">
+                                            (<span class="review_number">10</span>)
+                                        </div>
+                                    </div>
+                                    <div class="sp_category d-flex align-items-center justify-content-end ">
+                                        <a href="#">Furniture</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_shop_product">
+                                <div class="shop_product_img">
+                                    <img class="img-fluid" src="img/product-22.png" alt="shop product image">
+                                    <span class="love_react">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <div class="sp_option d-flex align-items-center justify-content-center ">
+                                        <ul class=" p-0 mb-0 d-flex">
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number9" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shop_product_info">
+                                    <b>$140</b>
+                                    <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rating_sp d-flex align-items-center gap-3">
+                                        <div class="star d-flex align-items-center gap-1">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="review_count">
+                                            (<span class="review_number">10</span>)
+                                        </div>
+                                    </div>
+                                    <div class="sp_category d-flex align-items-center justify-content-end ">
+                                        <a href="#">Furniture</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_shop_product">
+                                <div class="shop_product_img">
+                                    <img class="img-fluid" src="img/product-21.png" alt="shop product image">
+                                    <span class="love_react">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <div class="sp_option d-flex align-items-center justify-content-center ">
+                                        <ul class=" p-0 mb-0 d-flex">
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number_9" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shop_product_info">
+                                    <b>$140</b>
+                                    <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rating_sp d-flex align-items-center gap-3">
+                                        <div class="star d-flex align-items-center gap-1">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="review_count">
+                                            (<span class="review_number">10</span>)
+                                        </div>
+                                    </div>
+                                    <div class="sp_category d-flex align-items-center justify-content-end ">
+                                        <a href="#">Furniture</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_shop_product">
+                                <div class="shop_product_img">
+                                    <img class="img-fluid" src="img/product-019.png" alt="shop product image">
+                                    <span class="love_react">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <div class="sp_option d-flex align-items-center justify-content-center ">
+                                        <ul class=" p-0 mb-0 d-flex">
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number10" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shop_product_info">
+                                    <b>$140</b>
+                                    <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rating_sp d-flex align-items-center gap-3">
+                                        <div class="star d-flex align-items-center gap-1">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="review_count">
+                                            (<span class="review_number">10</span>)
+                                        </div>
+                                    </div>
+                                    <div class="sp_category d-flex align-items-center justify-content-end ">
+                                        <a href="#">Furniture</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_shop_product">
+                                <div class="shop_product_img">
+                                    <img class="img-fluid" src="img/product-013.png" alt="shop product image">
+                                    <span class="love_react">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </span>
+                                    <div class="sp_option d-flex align-items-center justify-content-center ">
+                                        <ul class=" p-0 mb-0 d-flex">
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </li>
+                                            <li class="list-unstyled">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                <div class="sp_quantity">
+                                                    <div class="qantity_wrapper  d-flex align-items-center">
+                                                        <button class="decrease">-</button>
+                                                        <input type="number" id="qantity_number11" value="01" min="1"
+                                                            class="cart_value">
+                                                        <button class="increase">+</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shop_product_info">
+                                    <b>$140</b>
+                                    <a href="#">Treated Pine Wood Chair</a>
+                                    <div class="stock_status">
+                                        <p class="status_text">Sold: <span>20</span>/<span>30</span> Products</p>
+                                        <div class="status_progressbar">
+                                            <div class="fill_area"></div>
+                                        </div>
+                                    </div>
+                                    <div class="rating_sp d-flex align-items-center gap-3">
+                                        <div class="star d-flex align-items-center gap-1">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="review_count">
+                                            (<span class="review_number">10</span>)
+                                        </div>
+                                    </div>
+                                    <div class="sp_category d-flex align-items-center justify-content-end ">
+                                        <a href="#">Furniture</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="pagination_container d-flex align-items-center justify-content-between py-5">
+                        <div class="pagination" data-total-count="40" data-take="10"></div>
+                        <div class="short_by d-flex align-items-center justify-content-between ">
+                            <p>Page: <span class="page_no">1</span> of <span class="total_pages">4</span></p>
                         </div>
                     </div>
                 </div>
@@ -5045,6 +5412,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.pajinatify.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/shop.js"></script>
 </body>

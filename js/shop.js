@@ -362,6 +362,19 @@ sideBar_close.addEventListener("click", () => {
     sideBar_show.style.display = "flex";
 
 })
+
+window.addEventListener("resize", () => {
+    if (window.matchMedia("(max-width: 991px)").matches) {
+        side_bar.style.display = "none";
+        product_container.style.width = "100%";
+        sideBar_show.style.display = "flex";
+    }
+}
+)
+
+
+
+
 sideBar_show.addEventListener("click", () => {
     side_bar.style.display = "block";
     product_container.style.width = "calc(100% - 300px)";
@@ -555,7 +568,22 @@ const product_container_box = document.querySelector(".product_container")
 const product_infos = document.querySelectorAll(".shop_product_info")
 
 grid_per4.addEventListener('click', () => {
-    product_container_box.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
+    function adjustGrid4Layout() {
+
+        if (window.matchMedia("(max-width: 1200px)").matches) {
+            product_container_box.style.gridTemplateColumns = "1fr 1fr 1fr";
+        }
+        else {
+            product_container_box.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
+        }
+    }
+
+    // Initial adjustment when the page loads
+    adjustGrid4Layout();
+
+    // Event listener for window resize
+    window.addEventListener("resize", adjustGrid4Layout);
+
     products.forEach(p => {
         p.style.display = "block";
     })
@@ -567,7 +595,23 @@ grid_per4.addEventListener('click', () => {
     })
 })
 grid_per3.addEventListener('click', () => {
-    product_container_box.style.gridTemplateColumns = "1fr 1fr 1fr";
+
+    function adjustGrid3Layout() {
+
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            product_container_box.style.gridTemplateColumns = "1fr 1fr";
+        }
+        else {
+            product_container_box.style.gridTemplateColumns = "1fr 1fr 1fr";
+        }
+    }
+
+    // Initial adjustment when the page loads
+    adjustGrid3Layout();
+
+    // Event listener for window resize
+    window.addEventListener("resize", adjustGrid3Layout);
+
     products.forEach(p => {
         p.style.display = "block";
     })
@@ -579,7 +623,24 @@ grid_per3.addEventListener('click', () => {
     })
 })
 grid_per2.addEventListener('click', () => {
-    product_container_box.style.gridTemplateColumns = "1fr 1fr";
+
+
+    function adjustGrid2Layout() {
+
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            product_container_box.style.gridTemplateColumns = "1fr";
+        }
+        else {
+            product_container_box.style.gridTemplateColumns = "1fr 1fr";
+        }
+    }
+
+    // Initial adjustment when the page loads
+    adjustGrid2Layout();
+
+    // Event listener for window resize
+    window.addEventListener("resize", adjustGrid2Layout);
+
     products.forEach(p => {
         p.style.display = "block";
     })
@@ -591,7 +652,23 @@ grid_per2.addEventListener('click', () => {
     })
 })
 list_view.addEventListener('click', () => {
-    product_container_box.style.gridTemplateColumns = "1fr 1fr";
+
+
+    function adjustGrid2Layout() {
+
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            product_container_box.style.gridTemplateColumns = "1fr";
+        }
+        else {
+            product_container_box.style.gridTemplateColumns = "1fr 1fr";
+        }
+    }
+
+    // Initial adjustment when the page loads
+    adjustGrid2Layout();
+
+    // Event listener for window resize
+    window.addEventListener("resize", adjustGrid2Layout);
     products.forEach(p => {
         p.style.display = "flex";
     })
@@ -759,3 +836,39 @@ var swiper6 = new Swiper(".mySwiper12", {
     },
 
 });
+
+var swiper = new Swiper(".mySwiper18", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        991: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        1400: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
+});
+var swiper17 = new Swiper(".mySwiper17", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next17",
+        prevEl: ".swiper-button-prev17",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
+

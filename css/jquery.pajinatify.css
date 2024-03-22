@@ -21,7 +21,7 @@
   border-radius: 100%;
   width: 40px;
   height: 40px;
-  color: black;
+  color: var(--sub-text-color);
   text-decoration: none;
   border-right-color: #fff;
   position: relative;
@@ -46,7 +46,7 @@
 }
 
 .pajinatify>span.pajinatify__current {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
   color: #fff;
   cursor: default;
   pointer-events: none;
@@ -75,7 +75,9 @@
   transform: rotate(-45deg);
   margin-left: -6px;
 }
-
+body.dark-them .pajinatify>span {
+  background-color: var(--secondary-color);
+}
 .pajinatify>span.pajinatify__arrow.arrow__prev {
   left: 0;
 }

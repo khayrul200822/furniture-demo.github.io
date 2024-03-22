@@ -348,6 +348,83 @@ toggle_button.addEventListener("click", () => {
 
 
 
+
+
+//for side bar handling
+const sideBar_close = document.querySelector(".aside_close");
+const side_bar = document.querySelector("aside");
+const product_container = document.querySelector(".shop_container");
+const sideBar_show = document.querySelector(".sidebar_show");
+
+sideBar_close.addEventListener("click", () => {
+  side_bar.style.display = "none";
+  product_container.style.width = "100%";
+  sideBar_show.style.display = "flex";
+
+})
+sideBar_show.addEventListener("click", () => {
+  side_bar.style.display = "block";
+  product_container.style.width = "calc(100% - 300px)";
+  sideBar_show.style.display = "none"
+})
+
+
+//for sortby popup and filtaring popup
+const dropdown = document.querySelector(".pageShow_item_popup")
+const dropdown2 = document.querySelector(".short_list")
+const dropdown_btn = document.querySelector(".pageShow_select_btn")
+const dropdown_btn2 = document.querySelector(".short_by_btn")
+
+let isclicked = true;
+const dropdown_handler = (dropdown_area, dropdown_button) => {
+  dropdown_button.addEventListener("click", () => {
+    if (isclicked) {
+      dropdown_area.style.animation = "list_anim 1s linear forwards alternate";
+      dropdown_area.style.display = "block"
+    } else {
+      dropdown_area.style.animation = "list_anim_close 1s linear forwards alternate";
+      dropdown_area.style.display = "none"
+    }
+    isclicked = !isclicked;
+  })
+
+}
+dropdown_handler(dropdown, dropdown_btn)
+dropdown_handler(dropdown2, dropdown_btn2)
+
+
+
+// for sort and filter value assign
+const item_value_field = document.querySelector(".show_p_item");
+const item_value = document.querySelectorAll(".pageShow_item_popup ul li")
+const sort_value = document.querySelectorAll(".short_list ul li")
+const sort_value_field = document.querySelector(".sort_item")
+const value_handler = (select_items, selcet_value) => {
+  select_items.forEach(item => {
+    item.addEventListener("click", () => {
+
+ 
+      // item_value_field.textContent = item.textContent;
+      // item.innerHTML = `<i class="fa-solid fa-check"></i> ${item.textContent}`
+      select_items.forEach(otherItem => {
+        otherItem.innerHTML = otherItem.textContent;
+      });
+      // Add icon to the clicked item
+      item.innerHTML = `<i class="fa-solid fa-check"></i> ${item.textContent}`;
+
+      // Update the item_value_field content
+      selcet_value.textContent = item.textContent;
+    })
+
+  })
+}
+value_handler(item_value, item_value_field)
+value_handler(sort_value, sort_value_field)
+
+
+
+
+
 //sticky header handler
 const header = document.querySelector("header");
 const toggleClass = "sticky_animation";

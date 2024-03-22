@@ -2897,7 +2897,7 @@ header {
 .interested_product_slider .interested_product .i_product_info>a {
   font-size: 14px;
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--sub-text-color);
   font-weight: 600;
   margin-bottom: 10px;
   display: block;
@@ -2934,8 +2934,9 @@ header {
 
 .interested_product_slider .interested_product .i_product_info>button:hover {
   background: var(--secondary-color);
-  color: var(--text-color);
+  color: var(--sub-text-color);
   transition: .6s;
+  border: 1px solid var(--primary-color);
 }
 
 .interested_product_slider .interested_product:hover .i_product_img img {
@@ -2955,7 +2956,7 @@ header {
 .interested_product_header>b {
   font-size: 17px;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--sub-text-color);
 }
 
 /* hero section style */

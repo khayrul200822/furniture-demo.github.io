@@ -2983,7 +2983,9 @@ button.mobile_menu_btn:hover {
   body.dark-them .copy_right_section {
     background: var(--secondary-color);
   }
-  
+  body.dark-them .copy_right_wrapper p {
+    color: var(--dark-text-color);
+}
   body.dark-them .toggle_menu :where(.toggle_icon, button) {
     background: var(--secondary-color);
     color: var(--text-color);

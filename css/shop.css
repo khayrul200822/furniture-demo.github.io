@@ -5304,11 +5304,14 @@ body.dark-them .shop_form_wrapper form .form_btn button:hover {
   background: var(--secondary-color);
 }
 
+
 body.dark-them .shop_form_wrapper form > .single_input select option {
-  color: black;
+  color: var(--dark-text-color);
 }
 
-
+body.dark-them .shop_form_wrapper form > .single_input select {
+  background: var(--bg-color);
+}
 
 
 

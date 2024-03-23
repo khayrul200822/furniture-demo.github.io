@@ -808,6 +808,18 @@ var swiper7 = new Swiper(".mySwiper7", {
     },
 });
 
+var swiperAside = new Swiper(".mySwiperAside", {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-nextAside",
+        prevEl: ".swiper-button-prevAside",
+    },
+});
+
+
 var swiper15= new Swiper(".mySwiper15", {
     spaceBetween: 5,
     slidesPerView: 2,

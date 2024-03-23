@@ -2017,7 +2017,7 @@ ul.main_menu {
 
 .accordion-container .accordion-title.open {
   background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 
 .accordion-container .accordion-title:hover::before {

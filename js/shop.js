@@ -487,6 +487,30 @@ side_category_close.addEventListener("click", () => {
     side_category_popup.style.animation = "slide_out 1s ease-in  forwards"
 
 })
+
+
+//mobile side category
+const sm_side_category_close = document.querySelector(".sm_side_category_close button")
+const sm_side_category_popup = document.querySelector(".side_category_sm")
+const sm_side_category_wrapper = document.querySelector(".side_category_wrapper_sm")
+const sm_side_category_open = document.querySelector(".category_container button")
+
+sm_side_category_open.addEventListener("click", () => {
+    sm_side_category_wrapper.style.animation = "slide_right 1s ease-in forwards"
+    sm_side_category_popup.style.animation = "slide_right2 1s ease-in forwards"
+})
+
+sm_side_category_close.addEventListener("click", () => {
+    sm_side_category_wrapper.style.animation = "slide_left 1s ease-in  forwards"
+    sm_side_category_popup.style.animation = "slide_out 1s ease-in  forwards"
+
+})
+
+
+
+
+
+
 //aside accrodian handleing
 
 const accordionBtns = document.querySelectorAll(".accordion");
@@ -769,62 +793,20 @@ var swiper = new Swiper(".mySwiper", {
     }
 });
 
-var swiper2 = new Swiper(".mySwiper2", {
-    spaceBetween: 5,
-    slidesPerView: 2,
-    navigation: {
-        nextEl: ".swiper-button-next2",
-        prevEl: ".swiper-button-prev2",
+
+var swiper7 = new Swiper(".mySwiper7", {
+    autoplay: {
+        delay: 1000,
     },
-    breakpoints: {
-        500: {
-            slidesPerView: 3,
-            spaceBetween: 5,
-        },
-        600: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
-        767: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 6,
-            spaceBetween: 20,
-        },
-        1200: {
-            slidesPerView: 7,
-            spaceBetween: 20,
-        }
-    }
-});
-
-
-var swiper3 = new Swiper(".mySwiper3", {
     loop: true,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
-        nextEl: ".swiper-button-next3",
-        prevEl: ".swiper-button-prev3",
+        nextEl: ".swiper-button-next7",
+        prevEl: ".swiper-button-prev7",
     },
-    breakpoints: {
-        480: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        767: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        }
-    }
 });
-
 
 var swiper4 = new Swiper(".mySwiper4", {
     loop: true,
@@ -875,7 +857,61 @@ var swiper6 = new Swiper(".mySwiper6", {
     effect: "flip"
 
 });
+var swiper8 = new Swiper(".mySwiper8", {
+    autoplay: {
+        delay: 1000,
+    },
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next8",
+        prevEl: ".swiper-button-prev8",
+    },
+});
 
+var swiper9 = new Swiper(".mySwiper9", {
+    autoplay: {
+        delay: 1000,
+    },
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next9",
+        prevEl: ".swiper-button-prev9",
+    },
+});
+
+var swiper10 = new Swiper(".mySwiper10", {
+    autoplay: {
+        delay: 1000,
+    },
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next10",
+        prevEl: ".swiper-button-prev10",
+    },
+});
+
+var swiper11 = new Swiper(".mySwiper11", {
+    autoplay: {
+        delay: 1000,
+    },
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next11",
+        prevEl: ".swiper-button-prev11",
+    },
+});
 var swiper6 = new Swiper(".mySwiper12", {
     loop: true,
     autoplay: true,

@@ -1938,7 +1938,7 @@ ul.main_menu {
 }
 
 .accordion-container .menu_item>span {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   transition: .8s;
 }
 
@@ -2017,7 +2017,7 @@ ul.main_menu {
 
 .accordion-container .accordion-title.open {
   background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 
 .accordion-container .accordion-title:hover::before {
@@ -2239,6 +2239,23 @@ button.mobile_menu_btn:hover {
   transform: translate(-50%, 0px);
   bottom: 20px;
   transition: .6s;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background: var(--primary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+.dropdown-menu li>a {
+  padding: 5px 15px;
+  font-size: 14px;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background: var(--primary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .bottom_header ul.main_menu>li:hover .mega_menu {

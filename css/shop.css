@@ -5540,7 +5540,7 @@ body.dark-them .shop_form_wrapper form > .single_input select {
     transform: rotate(360deg);
   }
 }
-.single_shop_product .shop_product_img:hover .img_preloader {
+.img_preloader.is-hover {
   visibility: visible;
   opacity: 1;
   scale: 1;

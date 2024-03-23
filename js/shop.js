@@ -735,9 +735,9 @@ $(document).ready(function () {
 
 //bottom to top button script
 
-jQuery(document).ready(function() {
-    jQuery(window).scroll(function(){
-        if(jQuery(window).scrollTop() < 50){
+jQuery(document).ready(function () {
+    jQuery(window).scroll(function () {
+        if (jQuery(window).scrollTop() < 50) {
             jQuery('#rocketmeluncur').slideUp(500);
         } else {
             jQuery('#rocketmeluncur').slideDown(500);
@@ -754,7 +754,7 @@ jQuery(document).ready(function() {
             if (basewrocketmeluncur < 1000) {
                 var leftrocketmeluncur = parseInt(jQuery(ftrocketmeluncur).offset().left);
                 leftrocketmeluncur = leftrocketmeluncur < swrocketmeluncur ? leftrocketmeluncur * 2 - swrocketmeluncur : leftrocketmeluncur;
-                scrolltoprocketmeluncur.style.left = ( basewrocketmeluncur + leftrocketmeluncur ) + 'px';
+                scrolltoprocketmeluncur.style.left = (basewrocketmeluncur + leftrocketmeluncur) + 'px';
             } else {
                 scrolltoprocketmeluncur.style.left = 'auto';
                 scrolltoprocketmeluncur.style.right = '10px';
@@ -763,23 +763,48 @@ jQuery(document).ready(function() {
     });
 
     // Check if #rocketmeluncur exists
-    if(jQuery('#rocketmeluncur').length) {
-        jQuery('#rocketmeluncur').click(function(){
-            jQuery("html, body").animate({ scrollTop: '0px',display:'none'},{
-                    duration: 600,  
-                    easing: 'linear'
-                });
+    if (jQuery('#rocketmeluncur').length) {
+        jQuery('#rocketmeluncur').click(function () {
+            jQuery("html, body").animate({ scrollTop: '0px', display: 'none' }, {
+                duration: 600,
+                easing: 'linear'
+            });
 
             var self = this;
-            self.className += ' '+"launchrocket";
-            setTimeout(function(){
+            self.className += ' ' + "launchrocket";
+            setTimeout(function () {
                 self.className = 'showrocket';
-            },800)
+            }, 800)
         });
     } else {
         console.error("#rocketmeluncur element not found.");
     }
 });
+
+
+//image preloader handler
+
+const loader_img = document.querySelectorAll(".shop_product_img");
+
+
+loader_img.forEach(l_img =>
+
+    l_img.addEventListener("mouseover", () => {
+        let img_prealoder_area = l_img.querySelector(".img_preloader");
+        img_prealoder_area.classList.add('is-hover')
+
+        setTimeout(() => {
+            img_prealoder_area.classList.remove('is-hover')
+
+        }, 2000);
+        l_img.addEventListener("mouseout", () => {
+            img_prealoder_area.classList.remove('is-hover')
+        })
+    }))
+
+
+
+
 
 //swiper code
 
@@ -819,7 +844,7 @@ var swiperAside = new Swiper(".mySwiperAside", {
 });
 
 
-var swiper15= new Swiper(".mySwiper15", {
+var swiper15 = new Swiper(".mySwiper15", {
     spaceBetween: 5,
     slidesPerView: 2,
     navigation: {

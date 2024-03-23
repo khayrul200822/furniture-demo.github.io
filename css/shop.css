@@ -1019,9 +1019,9 @@ ul.category_dropdown li:hover {
 }
 
 .side_cart .side_cart_wrapper .cart_bottom .cart_btns>button:hover {
-  border: 1px solid var(--primary-color);
   transition: .6s;
-  color: var(--primary-color);
+  color: var(--text-color);
+  background: var(--primary-color);
 }
 
 .side_cart .side_cart_wrapper .cart_bottom .cart_btns button:last-child:hover {

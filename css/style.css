@@ -977,7 +977,7 @@ ul.category_dropdown li:hover {
   font-weight: 500;
   padding: 13px;
   outline: none;
-  border: 1px solid var(--light-color);
+  border: 1px solid var(--primary-color);
   border-radius: 50px;
   color: var(--sub-text-color);
   background: var(--secondary-color);
@@ -992,9 +992,9 @@ ul.category_dropdown li:hover {
 }
 
 .side_cart .side_cart_wrapper .cart_bottom .cart_btns>button:hover {
-  border: 1px solid var(--primary-color);
   transition: .6s;
-  color: var(--primary-color);
+  color: var(--text-color);
+  background: var(--primary-color);
 }
 
 .side_cart .side_cart_wrapper .cart_bottom .cart_btns button:last-child:hover {

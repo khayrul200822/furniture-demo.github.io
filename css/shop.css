@@ -5222,11 +5222,13 @@ body.dark-them .quick_view_popup .close_quick_view {
   border: 1px solid var(--sub-text-color);
   border-radius: 3px;
   transition: .6s;
+  color: var(--sub-text-color);
 }
 
 .shop_form_wrapper form > .single_input label {
   font-size: 14px;
   font-weight: 500;
+  color: var(--sub-text-color);
 }
 
 .shop_form_wrapper form .form_btn button {
@@ -5248,7 +5250,7 @@ body.dark-them .quick_view_popup .close_quick_view {
 }
 
 .shop_form_wrapper form > .single_input select:focus {
-  border-color: var(--primary-color);
+  border-color: var(--primary-color) !important;
   transition: .6s;
 }
 
@@ -5283,7 +5285,28 @@ section.shop_form {
 .inner_div select {
   width: 48%;
 }
+body.dark-them .shop_form_wrapper .shop_form_header > p {
+  color: var(--secondary-color);
+}
 
+body.dark-them .shop_form_wrapper .shop_form_header >h2 {
+  color: var(--secondary-color);
+}
+
+body.dark-them .shop_form_wrapper form > .single_input select {
+  color: var(--dark-text-color);
+  border-color: var(--secondary-color);
+}
+body.dark-them .single_shop_product .shop_product_img span.love_react {
+  background: var(--bg-color);
+}
+body.dark-them .shop_form_wrapper form .form_btn button:hover {
+  background: var(--secondary-color);
+}
+
+body.dark-them .shop_form_wrapper form > .single_input select option {
+  color: black;
+}
 
 
 

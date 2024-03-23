@@ -125,27 +125,27 @@ const variation_wrapper = document.querySelector(".variation_wrapper")
 variation_open_btn.forEach(btn => {
     btn.addEventListener("click", () => {
         variation_wrapper.style.animation = "slide_right 1s ease-in forwards"
-      variation_area.style.animation = "slide_right2 1s ease-in forwards"
+        variation_area.style.animation = "slide_right2 1s ease-in forwards"
     })
-  })
-  variation_close_btn.addEventListener("click", () => {
+})
+variation_close_btn.addEventListener("click", () => {
     variation_wrapper.style.animation = "slide_right3 1s ease-in forwards"
     variation_area.style.animation = "slide_out 1s ease-in forwards"
-  
-  })
+
+})
 
 
 //quick view popup
 const quick_view_area = document.querySelector(".quick_view_popup")
 const quick_view_btn = document.querySelector(".close_quick_view")
 
-const quick_view_wrapper= document.querySelector(".quick_view_wrapper")
+const quick_view_wrapper = document.querySelector(".quick_view_wrapper")
 const quick_view_open = document.querySelectorAll(".quick_view");
 quick_view_open.forEach(btn => {
-  btn.addEventListener("click", () => {
-    quick_view_wrapper.style.animation = "slide_right 1s ease-in forwards"
-    quick_view_area.style.animation = "slide_right2 1s ease-in forwards"
-  })
+    btn.addEventListener("click", () => {
+        quick_view_wrapper.style.animation = "slide_right 1s ease-in forwards"
+        quick_view_area.style.animation = "slide_right2 1s ease-in forwards"
+    })
 })
 quick_view_btn.addEventListener("click", () => {
     quick_view_wrapper.style.animation = "slide_right3 1s ease-in forwards"
@@ -158,15 +158,15 @@ quick_view_btn.addEventListener("click", () => {
 //video popup hanlder 
 const video_close_btn = document.querySelector(".video_popup_close");
 const video_open_btn = document.querySelectorAll(".video_btn");
-const video_popup_area= document.querySelector(".product_video_popup");
+const video_popup_area = document.querySelector(".product_video_popup");
 const video_wrapper = document.querySelector(".video_popup_wrapper");
 
 video_open_btn.forEach(btn => {
     btn.addEventListener("click", () => {
-    video_wrapper.style.animation = "slide_right 1s ease-in forwards"
-    video_popup_area.style.animation = "slide_right2 1s ease-in forwards"
+        video_wrapper.style.animation = "slide_right 1s ease-in forwards"
+        video_popup_area.style.animation = "slide_right2 1s ease-in forwards"
+    })
 })
-})  
 video_close_btn.addEventListener("click", () => {
     video_wrapper.style.animation = "slide_right3 1s ease-in  forwards"
     video_popup_area.style.animation = "slide_out 1s ease-in  forwards"
@@ -455,15 +455,15 @@ window.addEventListener("scroll", () => {
 
 
 //dragable content
-$( function() {
-    $( ".toggle_menu" ).draggable();
-  } );
+$(function () {
+    $(".toggle_menu").draggable();
+});
 
 let isDark = true;
 
 //*** Dark mode & Light Mode***/
 //Dark mode and Light mode handler
-$(document).ready(function() {
+$(document).ready(function () {
     const title_color = $(".popup_title > h2");
     const title_color2 = $(".popup_close");
     const title_color3 = $(".category_slider_header h2");
@@ -479,10 +479,10 @@ $(document).ready(function() {
     const title_color5 = $(".newsletter_wrapper h3");
     const title_color4 = $(".section_close");
     const mode_button = $(".mode_btn");
-    const top_header= $(".top_header_wrapper .right");
+    const top_header = $(".top_header_wrapper .right");
     let isDark = true;
 
-    mode_button.on("click", function() {
+    mode_button.on("click", function () {
         if (isDark) {
             mode_button.html(`<i class="fa-regular fa-sun"></i>`);
             $("body").addClass("dark-them");
@@ -533,42 +533,52 @@ color_select.forEach((btn, index) => {
 });
 
 //bottom to top button script
-jQuery(window).scroll(function(){
-    if(jQuery(window).scrollTop()<50){
-        jQuery('#rocketmeluncur').slideUp(500);
-    }else{
-        jQuery('#rocketmeluncur').slideDown(500);
-    }
-    var ftrocketmeluncur = jQuery("#ft")[0] ? jQuery("#ft")[0] : jQuery(document.body)[0];
-    var scrolltoprocketmeluncur = $('rocketmeluncur');
-var viewPortHeightrocketmeluncur = parseInt(document.documentElement.clientHeight);
-var scrollHeightrocketmeluncur = parseInt(document.body.getBoundingClientRect().top);
-var basewrocketmeluncur = parseInt(ftrocketmeluncur.clientWidth);
-var swrocketmeluncur = scrolltoprocketmeluncur.clientWidth;
-if (basewrocketmeluncur < 1000) {
-var leftrocketmeluncur = parseInt(fetchOffset(ftrocketmeluncur)['left']);
-leftrocketmeluncur = leftrocketmeluncur < swrocketmeluncur ? leftrocketmeluncur * 2 - swrocketmeluncur : leftrocketmeluncur;
-scrolltoprocketmeluncur.style.left = ( basewrocketmeluncur + leftrocketmeluncur ) + 'px';
-} else {
-scrolltoprocketmeluncur.style.left = 'auto';
-scrolltoprocketmeluncur.style.right = '10px';
-}
-})
 
-jQuery('#rocketmeluncur').click(function(){
-    jQuery("html, body").animate({ scrollTop: '0px',display:'none'},{
-            duration: 600,  
-            easing: 'linear'
+jQuery(document).ready(function() {
+    jQuery(window).scroll(function(){
+        if(jQuery(window).scrollTop() < 50){
+            jQuery('#rocketmeluncur').slideUp(500);
+        } else {
+            jQuery('#rocketmeluncur').slideDown(500);
+        }
+
+        var ftrocketmeluncur = jQuery("#ft").length ? jQuery("#ft")[0] : jQuery(document.body)[0];
+        var scrolltoprocketmeluncur = jQuery('#rocketmeluncur')[0]; // Selecting by ID
+        var viewPortHeightrocketmeluncur = parseInt(document.documentElement.clientHeight);
+        var scrollHeightrocketmeluncur = parseInt(document.body.getBoundingClientRect().top);
+        var basewrocketmeluncur = parseInt(ftrocketmeluncur.clientWidth);
+        var swrocketmeluncur = scrolltoprocketmeluncur.clientWidth;
+
+        if (scrolltoprocketmeluncur) {
+            if (basewrocketmeluncur < 1000) {
+                var leftrocketmeluncur = parseInt(fetchOffset(ftrocketmeluncur)['left']);
+                leftrocketmeluncur = leftrocketmeluncur < swrocketmeluncur ? leftrocketmeluncur * 2 - swrocketmeluncur : leftrocketmeluncur;
+                scrolltoprocketmeluncur.style.left = ( basewrocketmeluncur + leftrocketmeluncur ) + 'px';
+            } else {
+                scrolltoprocketmeluncur.style.left = 'auto';
+                scrolltoprocketmeluncur.style.right = '10px';
+            }
+        }
+    });
+
+    // Check if #rocketmeluncur exists
+    if(jQuery('#rocketmeluncur').length) {
+        jQuery('#rocketmeluncur').click(function(){
+            jQuery("html, body").animate({ scrollTop: '0px',display:'none'},{
+                    duration: 600,  
+                    easing: 'linear'
+                });
+
+            var self = this;
+            self.className += ' '+"launchrocket";
+            setTimeout(function(){
+                self.className = 'showrocket';
+            },800)
         });
-    
-    var self = this;
-    this.className += ' '+"launchrocket";
-    setTimeout(function(){
-      self.className = 'showrocket';
-    },800)
+    } else {
+        console.error("#rocketmeluncur element not found.");
+    }
 });
-
-
 
 
 
@@ -847,19 +857,19 @@ var swiper = new Swiper(".mySwiper14", {
             spaceBetween: 15,
         }
     }
-  });
-  var swiper15 = new Swiper(".mySwiper15", {
+});
+var swiper15 = new Swiper(".mySwiper15", {
     spaceBetween: 10,
     navigation: {
-      nextEl: ".swiper-button-next15",
-      prevEl: ".swiper-button-prev15",
+        nextEl: ".swiper-button-next15",
+        prevEl: ".swiper-button-prev15",
     },
     thumbs: {
-      swiper: swiper,
+        swiper: swiper,
     },
-  });
+});
 
-  var swiper13 = new Swiper(".mySwiper16", {
+var swiper13 = new Swiper(".mySwiper16", {
     autoplay: true,
     loop: true,
     slidesPerView: 1,
@@ -888,7 +898,7 @@ var swiper = new Swiper(".mySwiper18", {
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
-        480:{
+        480: {
             slidesPerView: 2,
             spaceBetween: 15,
         },
@@ -905,17 +915,17 @@ var swiper = new Swiper(".mySwiper18", {
             spaceBetween: 15,
         }
     }
-  });
-  var swiper17 = new Swiper(".mySwiper17", {
+});
+var swiper17 = new Swiper(".mySwiper17", {
     spaceBetween: 10,
     navigation: {
-      nextEl: ".swiper-button-next17",
-      prevEl: ".swiper-button-prev17",
+        nextEl: ".swiper-button-next17",
+        prevEl: ".swiper-button-prev17",
     },
     thumbs: {
-      swiper: swiper,
+        swiper: swiper,
     },
-  });
+});
 
 
 let isclicked = true;

@@ -551,7 +551,7 @@ jQuery(document).ready(function() {
 
         if (scrolltoprocketmeluncur) {
             if (basewrocketmeluncur < 1000) {
-                var leftrocketmeluncur = parseInt(fetchOffset(ftrocketmeluncur)['left']);
+                var leftrocketmeluncur = parseInt(jQuery(ftrocketmeluncur).offset().left);
                 leftrocketmeluncur = leftrocketmeluncur < swrocketmeluncur ? leftrocketmeluncur * 2 - swrocketmeluncur : leftrocketmeluncur;
                 scrolltoprocketmeluncur.style.left = ( basewrocketmeluncur + leftrocketmeluncur ) + 'px';
             } else {
@@ -579,7 +579,6 @@ jQuery(document).ready(function() {
         console.error("#rocketmeluncur element not found.");
     }
 });
-
 
 
 

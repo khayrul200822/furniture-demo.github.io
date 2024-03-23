@@ -808,6 +808,37 @@ var swiper7 = new Swiper(".mySwiper7", {
     },
 });
 
+var swiper15= new Swiper(".mySwiper15", {
+    spaceBetween: 5,
+    slidesPerView: 2,
+    navigation: {
+        nextEl: ".swiper-button-next15",
+        prevEl: ".swiper-button-prev15",
+    },
+    breakpoints: {
+        500: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+        },
+        600: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        767: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 7,
+            spaceBetween: 20,
+        }
+    }
+});
+
 var swiper4 = new Swiper(".mySwiper4", {
     loop: true,
     slidesPerView: 1,

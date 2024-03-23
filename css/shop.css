@@ -4967,10 +4967,10 @@ body.dark-them .short_list ul {
 }
 
 .single_shop_product .shop_product_img .sp_option ul>li:hover {
-  background: var(--primary-color);
+  background: var(--primary-color) !important;
   color: var(--text-color);
   transition: .6s;
-  border-color: var(--primary-color);
+  border-color: var(--primary-color) !important;
 }
 
 .single_shop_product .shop_product_img .sp_option ul>li {

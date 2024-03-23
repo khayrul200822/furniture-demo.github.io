@@ -5198,9 +5198,91 @@ body.dark-them .quick_view_popup .close_quick_view {
   background: var(--secondary-color);
 }
 
+.shop_form_wrapper form{
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  background: var(--bg-color);
+  padding: 30px 15px;
+  border-radius: 10px;
+}
 
+.shop_form_wrapper form > .single_input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
+.shop_form_wrapper form > .single_input select {
+  height: 45px;
+  font-size: 14px;
+  padding: 0px 10px;
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--sub-text-color);
+  border-radius: 3px;
+  transition: .6s;
+}
 
+.shop_form_wrapper form > .single_input label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.shop_form_wrapper form .form_btn button {
+  outline: none;
+  border: 1px solid transparent;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-weight: 600;
+  height: 45px;
+  font-size: 14px;
+  padding: 0px 35px;
+  align-self: end;
+  transition: .6s;
+  border-radius: 3px;
+}
+
+.shop_form_wrapper form .form_btn {
+  display: flex;
+}
+
+.shop_form_wrapper form > .single_input select:focus {
+  border-color: var(--primary-color);
+  transition: .6s;
+}
+
+.shop_form_wrapper .shop_form_header >h2 {
+  font-size: 25px;
+  color: var(--sub-text-color);
+}
+
+.shop_form_wrapper .shop_form_header {
+  margin-bottom: 15px;
+}
+
+.shop_form_wrapper .shop_form_header > p {
+  font-size: 14px;
+  color: var(--sub-text-color);
+}
+
+section.shop_form {
+  margin: 40px 0;
+}
+
+.shop_form_wrapper form .form_btn button:hover {
+  background: var(--light-color);
+  color: var(--sub-text-color);
+  transition: .6s;
+}
+
+.inner_div {
+  justify-content: space-between;
+}
+
+.inner_div select {
+  width: 48%;
+}
 
 
 
@@ -5508,6 +5590,10 @@ body.dark-them .quick_view_popup .close_quick_view {
   .product_container {
     grid-template-columns: 1fr;
   }
+  .shop_form_wrapper form{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
 }
 
 @media only screen and (max-width: 667px) {
@@ -5598,6 +5684,9 @@ body.dark-them .quick_view_popup .close_quick_view {
   .user_popup .user_popup_wrapper .right_side .right_side_btns {
     margin-top: 15px;
   }
+  .shop_form_wrapper .shop_form_header >h2 {
+    font-size: 18px;
+}
 }
 
 @media only screen and (max-width: 500px) {

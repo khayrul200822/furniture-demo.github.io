@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/jquery.pajinatify.css">
     <link rel="stylesheet" href="css/cwa_lightbox_css.css">
+    <link rel="stylesheet" href="css/star-rating-svg.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -4323,6 +4324,169 @@
         </div>
     </section>
 
+    <!--product tab-->
+    <section class="product_tab_section">
+        <div class="container-fluid container-xl">
+            <div class="tab_section_wrapper">
+                <div class="product_details_tabs">
+                    <div class="tab_container d-flex justify-content-center ">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="Description-tab" data-bs-toggle="tab"
+                                    data-bs-target="#Description" type="button" role="tab" aria-controls="Description"
+                                    aria-selected="true">Description</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="Review-tab" data-bs-toggle="tab" data-bs-target="#Review"
+                                    type="button" role="tab" aria-controls="Review"
+                                    aria-selected="false">Review</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="Questions-tab" data-bs-toggle="tab"
+                                    data-bs-target="#Questions" type="button" role="tab" aria-controls="Questions"
+                                    aria-selected="false">Questions</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="Description" role="tabpanel"
+                            aria-labelledby="Description-tab" tabindex="0">
+                            <div class="description_tab">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut deleniti dolorum
+                                    similique facilis molestiae quidem, id aspernatur perspiciatis placeat, modi
+                                    aliquid, reprehenderit porro esse nesciunt odio natus corporis? Reiciendis, facere.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, omnis cupiditate
+                                    veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
+                                    eum amet voluptatum. Hic dolores labore veritatis praesentium. <br> cupiditate
+                                    veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
+                                    eum amet voluptatum. Hic dolores labore veritatis praesentium.</p>
+                                <div class="product_des_imgs">
+                                    <div class="img_container">
+                                        <img class="img-fluid" src="img/product-04.png" alt="img/product-11.png">
+                                    </div>
+                                    <div class="img_container">
+                                        <img class="img-fluid" src="img/product-11.png" alt="img/product-11.png">
+                                    </div>
+                                    <div class="img_container">
+                                        <img class="img-fluid" src="img/product-016.png" alt="img/product-11.png">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, omnis cupiditate
+                                    veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
+                                    eum amet voluptatum. Hic dolores labore veritatis praesentium. <br> cupiditate
+                                    veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
+                                    eum amet voluptatum. Hic dolores labore veritatis praesentium.</p>
+                            </div>
+                        </div>    
+                        <div class="tab-pane fade" id="Review" role="tabpanel" aria-labelledby="Review-tab"
+                            tabindex="0">
+                            <h3>Customer Review</h3>
+                            <div class="review_rating">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="review_div">
+                                <p>Be the first to write a review</p>
+                                <button class="review_toggle">Write a Review</button>
+                                <form class="review_form ">
+                                    <div class="my-rating"></div>
+                                    <div class="rating_input">
+                                        <label for="review_title">Review Title</label>
+                                        <input type="text" id="review_title" placeholder="Give a Review title" required>
+                                    </div>
+                                    <div class="rating_input">
+                                        <label for="review_msg">Review</label>
+                                        <textarea type="text" id="review_msg" placeholder="Write Your Comment Here"
+                                            required></textarea>
+                                    </div>
+                                    <div class="rating_file_input">
+                                        <span>Upload Photo Or Video</span>
+                                        <div class="wrap-custom-file">
+                                            <input type="file" name="image1" id="image_upload"
+                                                accept=".gif, .jpg, .png" />
+                                            <label for="image_upload">
+                                                <span><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="rating_input">
+                                        <label for="r_name">Name</label>
+                                        <input type="text" id="r_name" placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="rating_input">
+                                        <label for="r_email">Email</label>
+                                        <input type="email" id="r_email" placeholder="Enter Your Email">
+                                    </div>
+                                    <div class="rating_input">
+                                        <button type="submit">Submit Review</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Questions" role="tabpanel" aria-labelledby="Questions-tab"
+                            tabindex="0">
+                            <ul class="accordion-list">
+                                <li>
+                                    <h3>I want to return my purchase! What do I do?</h3>
+                                    <div class="answer">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit. Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>How long does it take for me to get a refund?</h3>
+                                    <div class="answer">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit. Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>How can I get assistance if I need it?</h3>
+                                    <div class="answer">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit. Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.<br>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>How do I return orders shipped in multiple boxes?</h3>
+                                    <div class="answer">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
@@ -4586,6 +4750,7 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/cwa_lightbox_v1.js"></script>
+    <script src="js/jquery.star-rating-svg.js"></script>
     <script src="js/jquery.pajinatify.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/product.js"></script>

@@ -477,7 +477,11 @@ jQuery(document).ready(function() {
 //
 const viewer = document.querySelector(".viewer");
 
-viewer.textContent = Math. floor(Math. random() * (33 - 20 + 1) + 20);
+
+setInterval(() => {
+    viewer.textContent = Math. floor(Math. random() * (33 - 20 + 1) + 20);
+}, 5000);
+
 
 
 

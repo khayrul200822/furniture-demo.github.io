@@ -630,3 +630,44 @@ var swiper = new Swiper(".mySwiper18", {
         }
     }
 });
+
+//script for adding gallary
+var swiper = new Swiper(".mySwiper14", {
+    spaceBetween: 1,
+    slidesPerView: 4,
+    watchSlidesProgress: true,
+    pagination: {
+      el: ".swiper-pagination14",
+      clickable: true,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      380: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      480: {
+        slidesPerView: 4,
+        spaceBetween: 10
+      },
+      // when window width is >= 480px
+      668: {
+        slidesPerView: 5,
+        spaceBetween: 10
+      },
+  
+    }
+  })
+  var swiper2 = new Swiper(".mySwiper13", {
+    spaceBetween: 30,
+  
+    navigation: {
+      nextEl: ".swiper-button-next13",
+      prevEl: ".swiper-button-prev13",
+    },
+    thumbs: {
+      swiper: swiper,
+    }
+  }
+  );
+  

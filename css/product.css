@@ -4495,7 +4495,8 @@ section.product_main {
 
 .info_body .service_overview >li > b svg {
   margin-right: 7px;
-  font-size: 16px;
+  font-size: 20px;
+  width: 25px;
 }
 
 .info_body .secure_payment {
@@ -4510,15 +4511,17 @@ section.product_main {
   transition: .6s;
   transform: scale(1.2);
 }
+.info_body .color_div > ul > li:nth-child(2) {
+  background: cadetblue;
+}
 
+.info_body .color_div > ul > li:nth-child(3) {
+  background: burlywood;
+}
 
-
-
-
-
-
-
-
+.info_body .color_div > ul > li:last-child {
+  background: chocolate;
+}
 
 
 

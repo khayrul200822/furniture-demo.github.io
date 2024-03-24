@@ -474,6 +474,54 @@ jQuery(document).ready(function() {
     }
 });
 
+//
+const viewer = document.querySelector(".viewer");
+
+viewer.textContent = Math. floor(Math. random() * (33 - 20 + 1) + 20);
+
+
+
+//cout down for offer
+let dayValue = document.querySelector(".day b");
+let hrsValue = document.querySelector(".hrs b");
+let minValue = document.querySelector(".min b");
+let secValue = document.querySelector(".sec b");
+
+// Set the date you're counting down to (replace with your desired date)
+const countdownDate = new Date("May 10, 2024 04:04:40").getTime();
+
+// Update the countdown every 1 second
+const countdownInterval = setInterval(function () {
+  // Get the current date and time
+  const now = new Date().getTime();
+
+  // Calculate the remaining time
+  const timeRemaining = countdownDate - now;
+
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Update the HTML elements with the calculated values
+  dayValue.textContent = formatTime(days);
+  hrsValue.textContent = formatTime(hours);
+  minValuetextContent = formatTime(minutes);
+  secValue.textContent = formatTime(seconds);
+
+  // If the countdown is over, display a message or perform any action
+  if (timeRemaining < 0) {
+    clearInterval(countdownInterval);
+    // You can add a message or perform an action when the countdown is over
+    console
+  }
+}, 1000);
+
+// Function to format time values with leading zeros
+function formatTime(value) {
+  return value < 10 ? "0" + value : value;
+}
 
 
 

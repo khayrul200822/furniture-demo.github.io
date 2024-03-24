@@ -350,20 +350,23 @@ const top_header = document.querySelector(".top_header")
 const offer_banner = document.querySelector(".offer_banner")
 const news_section = document.querySelector(".header_news")
 
-window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 150) {
-        header.classList.add(toggleClass);
-        top_header.style.display = "none"
-        offer_banner.style.display = "none"
-        news_section.style.display = "none"
-    } else {
-        header.classList.remove(toggleClass);
-        top_header.style.display = "block"
-        offer_banner.style.display = "block"
-        news_section.style.display = "block"
-    }
-});
+
+$(document).ready(() => {
+    $(window).on("scroll", () => {
+        if ($(window).scrollTop()) {
+            header.classList.add(toggleClass);
+            top_header.style.display = "none"
+            offer_banner.style.display = "none"
+            news_section.style.display = "none"
+        } else {
+            header.classList.remove(toggleClass);
+            top_header.style.display = "block"
+            offer_banner.style.display = "block"
+            news_section.style.display = "block"
+        }
+    })
+})
+
 
 //side category 
 const side_category_close = document.querySelector(".side_category_close button")
@@ -428,9 +431,9 @@ $(document).ready(function () {
 });
 
 
-jQuery(document).ready(function() {
-    jQuery(window).scroll(function(){
-        if(jQuery(window).scrollTop() < 50){
+jQuery(document).ready(function () {
+    jQuery(window).scroll(function () {
+        if (jQuery(window).scrollTop() < 50) {
             jQuery('#rocketmeluncur').slideUp(500);
         } else {
             jQuery('#rocketmeluncur').slideDown(500);
@@ -447,7 +450,7 @@ jQuery(document).ready(function() {
             if (basewrocketmeluncur < 1000) {
                 var leftrocketmeluncur = parseInt(jQuery(ftrocketmeluncur).offset().left);
                 leftrocketmeluncur = leftrocketmeluncur < swrocketmeluncur ? leftrocketmeluncur * 2 - swrocketmeluncur : leftrocketmeluncur;
-                scrolltoprocketmeluncur.style.left = ( basewrocketmeluncur + leftrocketmeluncur ) + 'px';
+                scrolltoprocketmeluncur.style.left = (basewrocketmeluncur + leftrocketmeluncur) + 'px';
             } else {
                 scrolltoprocketmeluncur.style.left = 'auto';
                 scrolltoprocketmeluncur.style.right = '10px';
@@ -456,18 +459,18 @@ jQuery(document).ready(function() {
     });
 
     // Check if #rocketmeluncur exists
-    if(jQuery('#rocketmeluncur').length) {
-        jQuery('#rocketmeluncur').click(function(){
-            jQuery("html, body").animate({ scrollTop: '0px',display:'none'},{
-                    duration: 600,  
-                    easing: 'linear'
-                });
+    if (jQuery('#rocketmeluncur').length) {
+        jQuery('#rocketmeluncur').click(function () {
+            jQuery("html, body").animate({ scrollTop: '0px', display: 'none' }, {
+                duration: 600,
+                easing: 'linear'
+            });
 
             var self = this;
-            self.className += ' '+"launchrocket";
-            setTimeout(function(){
+            self.className += ' ' + "launchrocket";
+            setTimeout(function () {
                 self.className = 'showrocket';
-            },800)
+            }, 800)
         });
     } else {
         console.error("#rocketmeluncur element not found.");
@@ -477,74 +480,73 @@ jQuery(document).ready(function() {
 
 
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.accordion-list > li > .answer').hide();
-      
-    $('.accordion-list > li').click(function() {
-      if ($(this).hasClass("active")) {
-        $(this).removeClass("active").find(".answer").slideUp();
-      } else {
-        $(".accordion-list > li.active .answer").slideUp();
-        $(".accordion-list > li.active").removeClass("active");
-        $(this).addClass("active").find(".answer").slideDown();
-      }
-      return false;
+
+    $('.accordion-list > li').click(function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active").find(".answer").slideUp();
+        } else {
+            $(".accordion-list > li.active .answer").slideUp();
+            $(".accordion-list > li.active").removeClass("active");
+            $(this).addClass("active").find(".answer").slideDown();
+        }
+        return false;
     });
-    
-  });
-  
-  //review toggle button handling
-  const review_button = document.querySelector(".review_toggle");
-  const review_form_area = document.querySelector(".review_form");
-  
-  review_button.addEventListener("click", () => {
+
+});
+
+//review toggle button handling
+const review_button = document.querySelector(".review_toggle");
+const review_form_area = document.querySelector(".review_form");
+
+review_button.addEventListener("click", () => {
     review_form_area.classList.toggle("form_area_show")
-    if(review_form_area.className.includes("form_area_show")){
-      review_button.textContent = "Cancle Review"
-    }else{
-      review_button.textContent = "Write a Review"
+    if (review_form_area.className.includes("form_area_show")) {
+        review_button.textContent = "Cancle Review"
+    } else {
+        review_button.textContent = "Write a Review"
     }
-  
-  })
-  
-  
-  // rating fillup 
-  $(".my-rating").starRating({
+
+})
+
+
+// rating fillup 
+$(".my-rating").starRating({
     starSize: 25,
     minRating: 0,
-    activeColor:'#EEBE13',
-    ratedColor:'crimso',
-    disableAfterRate:false,
-  });
-  
-  // fill uploader
-  $('input[type="file"]').each(function(){
-  
+    activeColor: '#EEBE13',
+    ratedColor: 'crimso',
+    disableAfterRate: false,
+});
+
+// fill uploader
+$('input[type="file"]').each(function () {
+
     var $file = $(this),
         $label = $file.next('label'),
         $labelText = $label.find('span'),
         labelDefault = $labelText.text();
-  
-    $file.on('change', function(event){
-      var fileName = $file.val().split( '\\' ).pop(),
-          tmppath = URL.createObjectURL(event.target.files[0]);
-      if( fileName ){
-        $label
-          .addClass('file-ok')
-          .css('background-image', 'url(' + tmppath + ')');
-        $labelText.text(fileName);
-      }else{
-        $label.removeClass('file-ok');
-        $labelText.text(labelDefault);
-      }
+
+    $file.on('change', function (event) {
+        var fileName = $file.val().split('\\').pop(),
+            tmppath = URL.createObjectURL(event.target.files[0]);
+        if (fileName) {
+            $label
+                .addClass('file-ok')
+                .css('background-image', 'url(' + tmppath + ')');
+            $labelText.text(fileName);
+        } else {
+            $label.removeClass('file-ok');
+            $labelText.text(labelDefault);
+        }
     });
-  
-  });
-  
-  
-  
-  
-  
+
+});
+
+
+
+
 
 
 
@@ -552,7 +554,7 @@ $(document).ready(function(){
 //for product viewer hanlder
 const viewer = document.querySelector(".viewer");
 setInterval(() => {
-    viewer.textContent = Math. floor(Math. random() * (33 - 20 + 1) + 20);
+    viewer.textContent = Math.floor(Math.random() * (33 - 20 + 1) + 20);
 }, 5000);
 
 
@@ -569,35 +571,35 @@ const countdownDate = new Date("May 10, 2024 04:04:40").getTime();
 
 // Update the countdown every 1 second
 const countdownInterval = setInterval(function () {
-  // Get the current date and time
-  const now = new Date().getTime();
+    // Get the current date and time
+    const now = new Date().getTime();
 
-  // Calculate the remaining time
-  const timeRemaining = countdownDate - now;
+    // Calculate the remaining time
+    const timeRemaining = countdownDate - now;
 
-  // Calculate days, hours, minutes, and seconds
-  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-  // Update the HTML elements with the calculated values
-  dayValue.textContent = formatTime(days);
-  hrsValue.textContent = formatTime(hours);
-  minValuetextContent = formatTime(minutes);
-  secValue.textContent = formatTime(seconds);
+    // Update the HTML elements with the calculated values
+    dayValue.textContent = formatTime(days);
+    hrsValue.textContent = formatTime(hours);
+    minValuetextContent = formatTime(minutes);
+    secValue.textContent = formatTime(seconds);
 
-  // If the countdown is over, display a message or perform any action
-  if (timeRemaining < 0) {
-    clearInterval(countdownInterval);
-    // You can add a message or perform an action when the countdown is over
-    console
-  }
+    // If the countdown is over, display a message or perform any action
+    if (timeRemaining < 0) {
+        clearInterval(countdownInterval);
+        // You can add a message or perform an action when the countdown is over
+        console
+    }
 }, 1000);
 
 // Function to format time values with leading zeros
 function formatTime(value) {
-  return value < 10 ? "0" + value : value;
+    return value < 10 ? "0" + value : value;
 }
 
 
@@ -762,37 +764,36 @@ var swiper = new Swiper(".mySwiper14", {
     slidesPerView: 4,
     watchSlidesProgress: true,
     pagination: {
-      el: ".swiper-pagination14",
-      clickable: true,
+        el: ".swiper-pagination14",
+        clickable: true,
     },
     breakpoints: {
-      // when window width is >= 320px
-      380: {
-        slidesPerView: 3,
-        spaceBetween: 10
-      },
-      480: {
-        slidesPerView: 4,
-        spaceBetween: 10
-      },
-      // when window width is >= 480px
-      668: {
-        slidesPerView: 5,
-        spaceBetween: 10
-      },
-  
+        // when window width is >= 320px
+        380: {
+            slidesPerView: 3,
+            spaceBetween: 10
+        },
+        480: {
+            slidesPerView: 4,
+            spaceBetween: 10
+        },
+        // when window width is >= 480px
+        668: {
+            slidesPerView: 5,
+            spaceBetween: 10
+        },
+
     }
-  })
-  var swiper2 = new Swiper(".mySwiper13", {
+})
+var swiper2 = new Swiper(".mySwiper13", {
     spaceBetween: 30,
-  
+
     navigation: {
-      nextEl: ".swiper-button-next13",
-      prevEl: ".swiper-button-prev13",
+        nextEl: ".swiper-button-next13",
+        prevEl: ".swiper-button-prev13",
     },
     thumbs: {
-      swiper: swiper,
+        swiper: swiper,
     }
-  }
-  );
-  
+}
+);

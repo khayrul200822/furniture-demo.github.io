@@ -435,20 +435,23 @@ const top_header = document.querySelector(".top_header")
 const offer_banner = document.querySelector(".offer_banner")
 const news_section = document.querySelector(".header_news")
 
-window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 150) {
-        header.classList.add(toggleClass);
-        top_header.style.display = "none"
-        offer_banner.style.display = "none"
-        news_section.style.display = "none"
-    } else {
-        header.classList.remove(toggleClass);
-        top_header.style.display = "block"
-        offer_banner.style.display = "block"
-        news_section.style.display = "block"
-    }
-});
+
+$(document).ready(() => {
+    $(window).on("scroll", () => {
+        if ($(window).scrollTop()) {
+            header.classList.add(toggleClass);
+            top_header.style.display = "none"
+            offer_banner.style.display = "none"
+            news_section.style.display = "none"
+        } else {
+            header.classList.remove(toggleClass);
+            top_header.style.display = "block"
+            offer_banner.style.display = "block"
+            news_section.style.display = "block"
+        }
+    })
+})
+
 
 //variation popup handler
 

@@ -4139,7 +4139,10 @@ section.product_main {
 .product_right .info_head ul>li .hover_product .hp_info a:hover {
   color: var(--primary-color);
 }
-
+.product_left {
+  position: sticky;
+  top: 120px;
+}
 .product_right .info_head ul>li:hover .hover_product {
   transform: translate(0px, 0px);
   transition: .6s;

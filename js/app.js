@@ -453,10 +453,6 @@ $(document).ready(() => {
 })
 
 
-//variation popup handler
-
-
-
 //dragable content
 $(function () {
     $(".toggle_menu").draggable();

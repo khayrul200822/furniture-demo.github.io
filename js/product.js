@@ -604,7 +604,6 @@ function formatTime(value) {
 
 
 
-
 //swiper code
 
 var swiper = new Swiper(".mySwiper", {

@@ -4022,9 +4022,14 @@ body.dark-them .quick_view_wrapper .right_side>ul>li span {
 }
 
 .mySwiper13 .img_area {
-  height: 520px;
+  height: 360px;
   display: block;
   background: var(--bg-color);
+}
+.mySwiper13 .img_area model-viewer{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .mySwiper13 .img_area img {
@@ -4051,7 +4056,11 @@ section.product_main {
   height: 100%;
   object-fit: contain;
 }
-
+.mySwiper14 .thub_img model-viewer{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .mySwiper14 .thub_img {
   border: 1px solid var(--light-color);
   cursor: pointer;

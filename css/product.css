@@ -5668,9 +5668,49 @@ body.dark-them .variation_wrapper .product_info_side .variation_p_img {
 
 }
 
+.swiper-button-next7,
+.swiper-button-prev7,
+.swiper-button-next8,
+.swiper-button-prev8,
+.swiper-button-next9,
+.swiper-button-prev9,
+.swiper-button-next10,
+.swiper-button-prev10,
+.swiper-button-next11,
+.swiper-button-prev11 {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+  background: var(--light-color);
+  margin: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.swiper-button-next7::after,
+.swiper-button-prev7::after,
+.swiper-button-next8::after,
+.swiper-button-prev8::after,
+.swiper-button-next9::after,
+.swiper-button-prev9::after,
+.swiper-button-next10::after,
+.swiper-button-prev10::after,
+.swiper-button-next11::after,
+.swiper-button-prev11::after {
+  font-size: 14px !important;
+  color: var(--sub-text-color);
+}
 
-
-
+body.dark-them :where(.swiper-button-next7,
+.swiper-button-prev7,
+.swiper-button-next8,
+.swiper-button-prev8,
+.swiper-button-next9,
+.swiper-button-prev9,
+.swiper-button-next10,
+.swiper-button-prev10,
+.swiper-button-next11,
+.swiper-button-prev11){
+  background: var(--secondary-color);
+}
 
 
 

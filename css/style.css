@@ -4897,6 +4897,18 @@ body.dark-them .copy_right_wrapper p {
 body.dark-them :where(.swiper-button-prev16, .swiper-button-next16) {
   background: var(--bg-color);
 }
+body.dark-them :where(.swiper-button-next7,
+.swiper-button-prev7,
+.swiper-button-next8,
+.swiper-button-prev8,
+.swiper-button-next9,
+.swiper-button-prev9,
+.swiper-button-next10,
+.swiper-button-prev10,
+.swiper-button-next11,
+.swiper-button-prev11){
+  background: var(--secondary-color);
+}
 
 body.dark-them section.product_section .section_slider .single_product .product_info .info_header>a {
   color: var(--dark-text-color);

@@ -4167,7 +4167,7 @@ section.product_section .section_slider .single_product .product_img>.product_op
   width: 260px;
   position: absolute;
   right: 0;
-  top: -710%;
+  top: -830%;
   transform: translate(100%, 0px);
   z-index: 999;
 }
@@ -4279,7 +4279,7 @@ body.dark-them .hotsport_btn {
 .product_hotsport.eight .product_hotsport_wrapper,
 .product_hotsport.nine .product_hotsport_wrapper {
   left: 0;
-  top: -600%;
+  top: -1000%;
   transform: translate(-100%, 0);
 }
 

@@ -4297,7 +4297,6 @@ ul.breadcrumb_div li:first-child a {
 }
 
 .breadcrumb_wrapper {
-  background: var(--bg-color);
   padding: 10px;
   border-radius: 10px;
   margin-top: 20px;
@@ -4430,7 +4429,10 @@ aside .filter_price .price_inputs .field {
   align-items: center;
   height: 35px;
 }
-
+body.dark-them aside .filter_price .price_inputs .field span {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
 aside .filter_price .price_inputs .field input {
   width: 65px;
   font-size: 15px;
@@ -4694,7 +4696,7 @@ body.dark-them .popular_tags>a {
   display: grid;
   place-items: center;
   background: #ededed;
-  color: #333;
+  color: var(--sub-text-color);
   margin-right: 10px;
   cursor: pointer;
 }
@@ -5612,6 +5614,13 @@ body.dark-them .main_shop_wrapper aside .aside_head {
 }
 
 
+body.dark-them .product_view .single_view {
+  background: var(--secondary-color);
+}
+
+.breadcrumb_section {
+  background: var(--secondary-color);
+}
 
 
 

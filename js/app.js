@@ -676,8 +676,8 @@ var swiper4 = new Swiper(".mySwiper4", {
 });
 
 var swiper5 = new Swiper(".mySwiper5", {
-    loop: true,
-    autoplay: true,
+    // loop: true,
+    // autoplay: true,
     slidesPerView: 1,
     spaceBetween: 30,
     pagination: {

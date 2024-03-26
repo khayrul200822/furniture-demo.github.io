@@ -64,6 +64,26 @@ $(".scroll_close").on("click", () => {
 })
 
 
+const variation_close_btn = document.querySelector(".variation_close");
+const variation_open_btn = document.querySelectorAll(".varr_btn");
+const variation_area = document.querySelector(".variation_popup")
+const variation_wrapper = document.querySelector(".variation_wrapper")
+
+
+variation_open_btn.forEach(btn => {
+    btn.addEventListener("click", () => {
+        variation_wrapper.style.animation = "slide_right 1s ease-in forwards"
+        variation_area.style.animation = "slide_right2 1s ease-in forwards"
+    })
+})
+variation_close_btn.addEventListener("click", () => {
+    variation_wrapper.style.animation = "slide_right3 1s ease-in forwards"
+    variation_area.style.animation = "slide_out 1s ease-in forwards"
+
+})
+
+
+
 
 
 //quick view popup
@@ -756,6 +776,38 @@ var swiper = new Swiper(".mySwiper18", {
         }
     }
 });
+
+
+
+var swiperR = new Swiper(".mySwiperR", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: ".swiper-button-nextR",
+        prevEl: ".swiper-button-prevR",
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        767: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        991: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        },
+        1400: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
+});
+
+
+
 
 //script for adding gallary
 var swiper = new Swiper(".mySwiper14", {

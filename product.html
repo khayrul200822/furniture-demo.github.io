@@ -30,6 +30,75 @@
         <div class="square" id="sq9"></div>
     </div>
 
+    <!--product varient popup-->
+    <div class="variation_popup">
+        <div class="variation_popup_bg"></div>
+        <div class="variation_wrapper">
+            <button class="variation_close"><i class="fa-solid fa-xmark"></i></button>
+            <b>Option For You</b>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="product_info_side">
+                        <div class="variation_p_img">
+                            <img class="img-fluid" src="img/product-013.png" alt="variation product image">
+                        </div>
+                        <div class="variation_info">
+                            <a href="#">Fauteuil Direction Chair</a>
+                            <b>$180</b>
+                            <div class="vp_quantity">
+                                <button class="decrease">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+                                <input type="number" class="cart_value" value="01" min="1">
+                                <button class="increase">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="right_side_info">
+                        <div class="brand_div">
+                            <b class="d-flex align-items-center gap-3"><span>Brands: </span> <span
+                                    class="brand_name">IKEA</span></b>
+                            <ul class="brand_container  ps-0">
+                                <li class="list-unstyled selected_brand">
+                                    <img src="img/brand-1.jpg" alt="brand image" class="img-fluid">
+                                </li>
+                                <li class="list-unstyled">
+                                    <img src="img/brand-2.jpg" alt="brand image" class="img-fluid">
+                                </li>
+                                <li class="list-unstyled">
+                                    <img src="img/brand-3.jpg" alt="brand image" class="img-fluid">
+                                </li>
+                                <li class="list-unstyled">
+                                    <img src="img/brand-4.jpg" alt="brand image" class="img-fluid">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="color_div">
+                            <b class="d-flex align-items-center gap-3"><span>Color: </span> <span
+                                    class="color_name">Pink</span></b>
+                            <ul class="color_container d-flex align-items-center gap-3 ps-0">
+                                <li class="list-unstyled selected_color"></li>
+                                <li class="list-unstyled"></li>
+                                <li class="list-unstyled"></li>
+                                <li class="list-unstyled"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_button">
+                <button>
+                    <span>Add To Cart</span>
+                    <span><i class="fa-solid fa-cart-shopping"></i></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!--product quick view-->
     <div class="quick_view_popup">
         <div class="popup_bg"></div>
@@ -4064,8 +4133,10 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide ">
                                             <a class="img_area">
-                                                <model-viewer src="img/classic_round_side_table.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce"  shadow-intensity="1">
-       
+                                                <model-viewer src="img/classic_round_side_table.glb" ar
+                                                    ar-modes="webxr scene-viewer quick-look" camera-controls
+                                                    tone-mapping="commerce" shadow-intensity="1">
+
                                                 </model-viewer>
                                             </a>
                                         </div>
@@ -4269,10 +4340,10 @@
                                                 </button>
                                             </div>
                                             <button class="sp_cart_btn">
-                                               <span>Add To Cart</span> 
-                                               <span>
-                                                <i class="fa-solid fa-bag-shopping"></i>
-                                               </span> 
+                                                <span>Add To Cart</span>
+                                                <span>
+                                                    <i class="fa-solid fa-bag-shopping"></i>
+                                                </span>
                                             </button>
                                             <button>
                                                 <i class="fa-solid fa-shuffle"></i>
@@ -4282,7 +4353,7 @@
                                             <i class="animation"></i>
                                             <span>Buy Now It</span>
                                             <i class="animation"></i>
-                                            </button>
+                                        </button>
                                     </div>
                                     <div class="wishlit_div d-flex align-items-center gap-4 flex-wrap flex-lg-nowrap">
                                         <p class="mb-0 ">Did you like this product? Add to favorites now and follow the
@@ -4323,7 +4394,6 @@
             </div>
         </div>
     </section>
-
     <!--product tab-->
     <section class="product_tab_section">
         <div class="container-fluid container-xl">
@@ -4377,7 +4447,7 @@
                                     veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
                                     eum amet voluptatum. Hic dolores labore veritatis praesentium.</p>
                             </div>
-                        </div>    
+                        </div>
                         <div class="tab-pane fade" id="Review" role="tabpanel" aria-labelledby="Review-tab"
                             tabindex="0">
                             <h3>Customer Review</h3>
@@ -4486,8 +4556,532 @@
             </div>
         </div>
     </section>
-
-
+    <section class="related_product">
+        <div class="container-fluid container-xl">
+            <div class="related_wrapper">
+                <div class="rp_header d-flex align-items-center justify-content-between ">
+                    <h2>Related Product</h2>
+                    <div class="rp_navs d-flex align-items-center gap-3">
+                        <div class="swiper-button-prev swiper-button-prevR"></div>
+                        <div class="swiper-button-next swiper-button-nextR"></div>
+                    </div>
+                </div>
+                <div class="related_product_slider">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiperR">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="rp_img">
+                                        <div class="front_img">
+                                            <img class="img-fluid" src="img/product-014.png"
+                                                alt="related product image">
+                                        </div>
+                                        <div class="back_img">
+                                            <img class="img-fluid" src="img/product-015.png"
+                                                alt="related product image">
+                                        </div>
+                                        <div class="rp_option">
+                                            <button>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                            <button class="quick_view">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="rp_info d-flex flex-column align-items-center justify-content-center">
+                                        <a href="#" class="rp_category">Furniture</a>
+                                        <a href="#" class="rp_title">Classic Eames Plastic chair</a>
+                                        <div class="rp_rating d-flex align-items-center gap-3">
+                                            <div class="start d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="rating_info">
+                                                (<span class="rating_num">20</span>)
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="rp_button_wrapper d-flex align-items-center justify-content-between">
+                                            <button class="varr_btn">
+                                                <span>Select Option</span>
+                                                <span>
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </span>
+                                            </button>
+                                            </button>
+                                            <div class="rp_quantity d-flex align-items-center">
+                                                <div class="rpq_field d-flex align-items-center">
+                                                    <button class="decrease">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                    <input type="number" value="01" min="1" id="rp_quantity1"
+                                                        class="cart_value">
+                                                    <button class="increase">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <button> <i class="fa-solid fa-cart-shopping"></i> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="rp_img">
+                                        <div class="front_img">
+                                            <img class="img-fluid" src="img/product-11.png" alt="related product image">
+                                        </div>
+                                        <div class="back_img">
+                                            <img class="img-fluid" src="img/product-08.png" alt="related product image">
+                                        </div>
+                                        <div class="rp_option">
+                                            <button>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                            <button class="quick_view">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="rp_info d-flex flex-column align-items-center justify-content-center">
+                                        <a href="#" class="rp_category">Furniture</a>
+                                        <a href="#" class="rp_title">Classic Eames Plastic chair</a>
+                                        <div class="rp_rating d-flex align-items-center gap-3">
+                                            <div class="start d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="rating_info">
+                                                (<span class="rating_num">20</span>)
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="rp_button_wrapper d-flex align-items-center justify-content-between">
+                                            <button class="varr_btn">
+                                                <span>Select Option</span>
+                                                <span>
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </span>
+                                            </button>
+                                            </button>
+                                            <div class="rp_quantity d-flex align-items-center">
+                                                <div class="rpq_field d-flex align-items-center">
+                                                    <button class="decrease">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                    <input type="number" value="01" min="1" id="rp_quantity2"
+                                                        class="cart_value">
+                                                    <button class="increase">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <button> <i class="fa-solid fa-cart-shopping"></i> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="rp_img">
+                                        <div class="front_img">
+                                            <img class="img-fluid" src="img/product-016.png"
+                                                alt="related product image">
+                                        </div>
+                                        <div class="back_img">
+                                            <img class="img-fluid" src="img/product-017.png"
+                                                alt="related product image">
+                                        </div>
+                                        <div class="rp_option">
+                                            <button>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                            <button class="quick_view">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="rp_info d-flex flex-column align-items-center justify-content-center">
+                                        <a href="#" class="rp_category">Furniture</a>
+                                        <a href="#" class="rp_title">Classic Eames Plastic chair</a>
+                                        <div class="rp_rating d-flex align-items-center gap-3">
+                                            <div class="start d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="rating_info">
+                                                (<span class="rating_num">20</span>)
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="rp_button_wrapper d-flex align-items-center justify-content-between">
+                                            <button class="varr_btn">
+                                                <span>Select Option</span>
+                                                <span>
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </span>
+                                            </button>
+                                            </button>
+                                            <div class="rp_quantity d-flex align-items-center">
+                                                <div class="rpq_field d-flex align-items-center">
+                                                    <button class="decrease">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                    <input type="number" value="01" min="1" id="rp_quantity3"
+                                                        class="cart_value">
+                                                    <button class="increase">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <button> <i class="fa-solid fa-cart-shopping"></i> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="rp_img">
+                                        <div class="front_img">
+                                            <img class="img-fluid" src="img/product-019.png"
+                                                alt="related product image">
+                                        </div>
+                                        <div class="back_img">
+                                            <img class="img-fluid" src="img/product-09.png" alt="related product image">
+                                        </div>
+                                        <div class="rp_option">
+                                            <button>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                            <button class="quick_view">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="rp_info d-flex flex-column align-items-center justify-content-center">
+                                        <a href="#" class="rp_category">Furniture</a>
+                                        <a href="#" class="rp_title">Classic Eames Plastic chair</a>
+                                        <div class="rp_rating d-flex align-items-center gap-3">
+                                            <div class="start d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="rating_info">
+                                                (<span class="rating_num">20</span>)
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="rp_button_wrapper d-flex align-items-center justify-content-between">
+                                            <button class="varr_btn">
+                                                <span>Select Option</span>
+                                                <span>
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </span>
+                                            </button>
+                                            </button>
+                                            <div class="rp_quantity d-flex align-items-center">
+                                                <div class="rpq_field d-flex align-items-center">
+                                                    <button class="decrease">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                    <input type="number" value="01" min="1" id="rp_quantity4"
+                                                        class="cart_value">
+                                                    <button class="increase">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <button> <i class="fa-solid fa-cart-shopping"></i> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="rp_img">
+                                        <div class="front_img">
+                                            <img class="img-fluid" src="img/product-005.png"
+                                                alt="related product image">
+                                        </div>
+                                        <div class="back_img">
+                                            <img class="img-fluid" src="img/product-06.png" alt="related product image">
+                                        </div>
+                                        <div class="rp_option">
+                                            <button>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                            <button class="quick_view">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="rp_info d-flex flex-column align-items-center justify-content-center">
+                                        <a href="#" class="rp_category">Furniture</a>
+                                        <a href="#" class="rp_title">Classic Eames Plastic chair</a>
+                                        <div class="rp_rating d-flex align-items-center gap-3">
+                                            <div class="start d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="rating_info">
+                                                (<span class="rating_num">20</span>)
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="rp_button_wrapper d-flex align-items-center justify-content-between">
+                                            <button class="varr_btn">
+                                                <span>Select Option</span>
+                                                <span>
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </span>
+                                            </button>
+                                            <div class="rp_quantity d-flex align-items-center">
+                                                <div class="rpq_field d-flex align-items-center">
+                                                    <button class="decrease">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                    <input type="number" value="01" min="1" id="rp_quantity5"
+                                                        class="cart_value">
+                                                    <button class="increase">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <button>
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="rp_img">
+                                        <div class="front_img">
+                                            <img class="img-fluid" src="img/product-01.png" alt="related product image">
+                                        </div>
+                                        <div class="back_img">
+                                            <img class="img-fluid" src="img/product-12.png" alt="related product image">
+                                        </div>
+                                        <div class="rp_option">
+                                            <button>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                            <button class="quick_view">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="rp_info d-flex flex-column align-items-center justify-content-center">
+                                        <a href="#" class="rp_category">Furniture</a>
+                                        <a href="#" class="rp_title">Classic Eames Plastic chair</a>
+                                        <div class="rp_rating d-flex align-items-center gap-3">
+                                            <div class="start d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="rating_info">
+                                                (<span class="rating_num">20</span>)
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="rp_button_wrapper d-flex align-items-center justify-content-between">
+                                            <button class="varr_btn">
+                                                <span>Select Option</span>
+                                                <span>
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </span>
+                                            </button>
+                                            <div class="rp_quantity d-flex align-items-center">
+                                                <div class="rpq_field d-flex align-items-center">
+                                                    <button class="decrease">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                    <input type="number" value="01" min="1" id="rp_quantity6"
+                                                        class="cart_value">
+                                                    <button class="increase">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <button>
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="rp_img">
+                                        <div class="front_img">
+                                            <img class="img-fluid" src="img/product-07.png" alt="related product image">
+                                        </div>
+                                        <div class="back_img">
+                                            <img class="img-fluid" src="img/product-08.png" alt="related product image">
+                                        </div>
+                                        <div class="rp_option">
+                                            <button>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                            <button class="quick_view">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="rp_info d-flex flex-column align-items-center justify-content-center">
+                                        <a href="#" class="rp_category">Furniture</a>
+                                        <a href="#" class="rp_title">Classic Eames Plastic chair</a>
+                                        <div class="rp_rating d-flex align-items-center gap-3">
+                                            <div class="start d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="rating_info">
+                                                (<span class="rating_num">20</span>)
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="rp_button_wrapper d-flex align-items-center justify-content-between">
+                                            <button class="varr_btn">
+                                                <span>Select Option</span>
+                                                <span>
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </span>
+                                            </button>
+                                            <div class="rp_quantity d-flex align-items-center">
+                                                <div class="rpq_field d-flex align-items-center">
+                                                    <button class="decrease">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                    <input type="number" value="01" min="1" id="rp_quantity7"
+                                                        class="cart_value">
+                                                    <button class="increase">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <button>
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="rp_img">
+                                        <div class="front_img">
+                                            <img class="img-fluid" src="img/product-04.png" alt="related product image">
+                                        </div>
+                                        <div class="back_img">
+                                            <img class="img-fluid" src="img/product-02.png" alt="related product image">
+                                        </div>
+                                        <div class="rp_option">
+                                            <button>
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                            <button class="quick_view">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="rp_info d-flex flex-column align-items-center justify-content-center">
+                                        <a href="#" class="rp_category">Furniture</a>
+                                        <a href="#" class="rp_title">Classic Eames Plastic chair</a>
+                                        <div class="rp_rating d-flex align-items-center gap-3">
+                                            <div class="start d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="rating_info">
+                                                (<span class="rating_num">20</span>)
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="rp_button_wrapper d-flex align-items-center justify-content-between">
+                                            <button class="varr_btn">
+                                                <span>Select Option</span>
+                                                <span>
+                                                    <i class="fa-solid fa-circle-plus"></i>
+                                                </span>
+                                            </button>
+                                            <div class="rp_quantity d-flex align-items-center">
+                                                <div class="rpq_field d-flex align-items-center">
+                                                    <button class="decrease">
+                                                        <i class="fa-solid fa-plus"></i>
+                                                    </button>
+                                                    <input type="number" value="01" min="1" id="rp_quantity8"
+                                                        class="cart_value">
+                                                    <button class="increase">
+                                                        <i class="fa-solid fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <button>
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 

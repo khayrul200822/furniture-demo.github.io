@@ -5599,6 +5599,17 @@ body.dark-them .shop_form_wrapper form {
 body.dark-them .img_preloader {
   background: #000000cf;
 }
+body.dark-them .img_preloader {
+  background: #000000cf;
+}
+
+body.dark-them .main_shop_wrapper aside .aside_head {
+  border-color: var(--secondary-color);
+}
+
+.main_shop_wrapper aside {
+  border: 1px solid var(--secondary-color);
+}
 
 
 

@@ -5358,11 +5358,7 @@ section.shop_form {
   width: 48%;
 }
 body.dark-them .shop_form_wrapper .shop_form_header > p {
-  color: var(--secondary-color);
-}
-
-body.dark-them .shop_form_wrapper .shop_form_header >h2 {
-  color: var(--secondary-color);
+  color: var(--dark-text-color);
 }
 
 body.dark-them .shop_form_wrapper form > .single_input select {
@@ -5589,8 +5585,20 @@ body.dark-them .shop_form_wrapper form > .single_input select {
   scale: 1;
   transition: .6s;
 }
+body.dark-them {
+  background: var(--bg-color);
+}
 
+body.dark-them .single_p_slide {
+  border: 1px solid var(--secondary-color);
+}
 
+body.dark-them .shop_form_wrapper form {
+  border: 1px solid var(--secondary-color);
+}
+body.dark-them .img_preloader {
+  background: #000000cf;
+}
 
 
 

@@ -5619,9 +5619,20 @@ body.dark-them .product_view .single_view {
 }
 
 .breadcrumb_section {
+  background: var(--bg-color);
+}
+body.dark-them .breadcrumb_section {
   background: var(--secondary-color);
 }
 
+body.dark-them .sidebar_show {
+  background: var(--secondary-color);
+  border-color: transparent;
+}
+
+body.dark-them .product_container_header {
+  border-color: var(--secondary-color);
+}
 
 
 

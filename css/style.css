@@ -3142,15 +3142,10 @@ section.hero_section {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.swiper-button-next5::after,
-.swiper-button-prev5::after,
-.swiper-button-next12::after,
-.swiper-button-prev12::after,
-.swiper-button-next13::after,
-.swiper-button-prev13::after {
+.swiper-button-next12::after, .swiper-button-prev12::after, .swiper-button-next13::after, .swiper-button-prev13::after {
   font-size: 20px !important;
   border-radius: 50%;
-  color: black;
+  color: var(--sub-text-color);
 }
 
 .hero_navs .swiper-button-next12:hover::after,
@@ -3308,7 +3303,7 @@ section.hero_section {
 .hero_navs .swiper-button-next13::after {
   font-size: 15px !important;
   font-weight: 900;
-  color: black;
+  color: var(--sub-text-color);
   opacity: 1;
   transition: .6s;
 }
@@ -4392,7 +4387,8 @@ body.dark-them .mega_menu .single_mega_menu>b {
 }
 
 body.dark-them .hero_navs_close {
-  color: var(--secondary-color);
+  color: var(--text-color);
+  background: var(--secondary-color);
 }
 
 body.dark-them .section_title>h2 {
@@ -4897,16 +4893,17 @@ body.dark-them .copy_right_wrapper p {
 body.dark-them :where(.swiper-button-prev16, .swiper-button-next16) {
   background: var(--bg-color);
 }
+
 body.dark-them :where(.swiper-button-next7,
-.swiper-button-prev7,
-.swiper-button-next8,
-.swiper-button-prev8,
-.swiper-button-next9,
-.swiper-button-prev9,
-.swiper-button-next10,
-.swiper-button-prev10,
-.swiper-button-next11,
-.swiper-button-prev11){
+  .swiper-button-prev7,
+  .swiper-button-next8,
+  .swiper-button-prev8,
+  .swiper-button-next9,
+  .swiper-button-prev9,
+  .swiper-button-next10,
+  .swiper-button-prev10,
+  .swiper-button-next11,
+  .swiper-button-prev11) {
   background: var(--secondary-color);
 }
 
@@ -5757,7 +5754,10 @@ body.dark-them .rate_mini_popup .rate_wrapper form.shiping_form .single_input la
   transform-origin: 50% 0
 }
 
-#rocketmeluncur:hover {transform: translate(0px, -20px);transition: .6s;}
+#rocketmeluncur:hover {
+  transform: translate(0px, -20px);
+  transition: .6s;
+}
 
 #rocketmeluncur:hover i {
   background-position: 50% 100%;
@@ -5787,10 +5787,54 @@ body.dark-them .rate_mini_popup .rate_wrapper form.shiping_form .single_input la
   -moz-transform: scale(1.4, 3.2);
   transform: scale(1.4, 3.2)
 }
+
 /*------------------------------------------*/
 
 
+body.dark-them section.product_section .section_slider .single_product .product_info .p_cart_btn .quantity>button {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
 
+body.dark-them section.product_section .section_slider .single_product .product_info .p_cart_btn>button {
+  border-color: transparent;
+}
+
+body.dark-them section.product_section .section_slider .single_product .product_info .p_cart_btn .quantity {
+  border-color: transparent;
+}
+
+body.dark-them .hero_navs {
+  background: var(--bg-color);
+  border: 1px solid var(--secondary-color);
+}
+
+body.dark-them .hero_navs_pused {
+  color: var(--text-color);
+}
+
+body.dark-them :where(.hero_navs .swiper-pagination5 .swiper-pagination-bullet, .hero_navs .swiper-pagination12 .swiper-pagination-bullet, .hero_navs .swiper-pagination13 .swiper-pagination-bullet) {
+  background: var(--);
+}
+
+body.dark-them :where(.swiper-button-next12, .swiper-button-prev12, .swiper-button-next13, .swiper-button-prev13) {
+  background: var(--secondary-color);
+  /* color: var(--text-color); */
+}
+
+body.dark-them :where(.hero_navs .swiper-button-next5, .hero_navs .swiper-button-next12, .hero_navs .swiper-button-prev5, .hero_navs .swiper-button-prev12, .hero_navs .swiper-button-next13, .hero_navs .swiper-button-prev13) {
+  background: var(--secondary-color);
+}
+
+body.dark-them :where(.hero_navs .swiper-button-next5:hover::after, .hero_navs .swiper-button-next12:hover::after, .hero_navs .swiper-button-prev5:hover::after, .hero_navs .swiper-button-next12:hover::after) {
+    color: var(--text-color);
+}
+
+body.dark-them :where(.hero_navs .swiper-button-next5::after, .hero_navs .swiper-button-prev5::after) {
+    color: var(--text-color);
+}
+
+body.dark-them :where(.hero_navs .swiper-button-next5::after, .hero_navs .swiper-button-next12::after, .hero_navs .swiper-button-prev5::after, .hero_navs .swiper-button-prev12::after, .hero_navs .swiper-button-next13::after, .hero_navs .swiper-button-prev13::after) {color: white !important;}
 
 
 

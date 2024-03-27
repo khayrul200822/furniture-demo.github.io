@@ -352,12 +352,13 @@ header {
   padding: 20px 0px;
 }
 
-.logo h2,
-.mobile_menu_header h2 {
+.logo a,
+.mobile_menu_header a {
   font-weight: 700;
   font-size: 35px;
   letter-spacing: .1rem;
   color: var(--primary-color);
+  text-decoration: none;
 }
 
 ul.category_dropdown {
@@ -386,8 +387,8 @@ ul.category_dropdown li:hover {
   transition: .6s;
 }
 
-.logo h2>span,
-.mobile_menu_header h2>span {
+.logo a > span,
+.mobile_menu_header a > span {
   color: var(--sub-text-color);
 }
 

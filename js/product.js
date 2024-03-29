@@ -451,51 +451,27 @@ $(document).ready(function () {
 });
 
 
-jQuery(document).ready(function () {
-    jQuery(window).scroll(function () {
-        if (jQuery(window).scrollTop() < 50) {
-            jQuery('#rocketmeluncur').slideUp(500);
-        } else {
-            jQuery('#rocketmeluncur').slideDown(500);
-        }
-
-        var ftrocketmeluncur = jQuery("#ft").length ? jQuery("#ft")[0] : jQuery(document.body)[0];
-        var scrolltoprocketmeluncur = jQuery('#rocketmeluncur')[0]; // Selecting by ID
-        var viewPortHeightrocketmeluncur = parseInt(document.documentElement.clientHeight);
-        var scrollHeightrocketmeluncur = parseInt(document.body.getBoundingClientRect().top);
-        var basewrocketmeluncur = parseInt(ftrocketmeluncur.clientWidth);
-        var swrocketmeluncur = scrolltoprocketmeluncur.clientWidth;
-
-        if (scrolltoprocketmeluncur) {
-            if (basewrocketmeluncur < 1000) {
-                var leftrocketmeluncur = parseInt(jQuery(ftrocketmeluncur).offset().left);
-                leftrocketmeluncur = leftrocketmeluncur < swrocketmeluncur ? leftrocketmeluncur * 2 - swrocketmeluncur : leftrocketmeluncur;
-                scrolltoprocketmeluncur.style.left = (basewrocketmeluncur + leftrocketmeluncur) + 'px';
-            } else {
-                scrolltoprocketmeluncur.style.left = 'auto';
-                scrolltoprocketmeluncur.style.right = '10px';
-            }
-        }
-    });
-
-    // Check if #rocketmeluncur exists
-    if (jQuery('#rocketmeluncur').length) {
-        jQuery('#rocketmeluncur').click(function () {
-            jQuery("html, body").animate({ scrollTop: '0px', display: 'none' }, {
-                duration: 600,
-                easing: 'linear'
-            });
-
-            var self = this;
-            self.className += ' ' + "launchrocket";
-            setTimeout(function () {
-                self.className = 'showrocket';
-            }, 800)
-        });
+//bottom to top button script
+let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("progress");
+    let progressValue = document.getElementById("progress-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+    if (pos > 100) {
+      scrollProgress.style.display = "grid";
     } else {
-        console.error("#rocketmeluncur element not found.");
+      scrollProgress.style.display = "none";
     }
-});
+    scrollProgress.addEventListener("click", () => {
+      document.documentElement.scrollTop = 0;
+    });
+    scrollProgress.style.background = `conic-gradient(#db5b00 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+  };
+  window.onscroll = calcScrollValue;
+  window.onload = calcScrollValue;
 
 
 

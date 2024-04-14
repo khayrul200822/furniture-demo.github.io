@@ -3137,7 +3137,7 @@
                     <form class="shiping_form d-flex flex-column gap-3">
                         <div class="single_input d-flex justify-content-center flex-column">
                             <label for="country_select">Country</label>
-                            <select id="country_select">
+                            <select id="country_select" required>
                                 <option value="0" disabled selected>Select Country</option>
                                 <option value="0">United Kindom</option>
                                 <option value="0">United State</option>
@@ -3150,7 +3150,7 @@
                         </div>
                         <div class="single_input d-flex justify-content-center flex-column">
                             <label for="State">State</label>
-                            <select id="State">
+                            <select id="State" required>
                                 <option value="0" disabled selected>Select State</option>
                                 <option value="0">United Kindom</option>
                                 <option value="0">United State</option>
@@ -3163,7 +3163,7 @@
                         </div>
                         <div class="single_input d-flex justify-content-center flex-column">
                             <label for="postal_code">Zip/Postal Code</label>
-                            <input type="text" id="postal_code" placeholder="Zip/Postal Code">
+                            <input type="text" id="postal_code" placeholder="Zip/Postal Code" required>
                         </div>
                         <div class="d-flex align-items-center justify-content-center gap-2 flex-column">
                             <button type="submit">Calculate Shipping Rates</button>
@@ -3177,7 +3177,7 @@
                 <div class="gift_wrap">
                     <span><i class="fa-solid fa-gift"></i></span>
                     <p>Do you want a gift wrap? Only $80</p>
-                    <button class="gift_btn">Add A Gift Wra</button>
+                    <button class="gift_btn">Add A Gift Wrap</button>
                     <button class=" delete_gift">Cancle</button>
                 </div>
             </div>
